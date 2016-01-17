@@ -1,0 +1,18 @@
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  
+  
