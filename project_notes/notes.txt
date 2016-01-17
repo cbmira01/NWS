@@ -1,0 +1,79 @@
+
+Router URLs (application targets)
+
+	nws/home
+			- list all articles in brief view
+			
+	nws/home/<articleUID>
+			- read a particular article in full view
+	
+	nws/services	
+			- list of useful phone numbers
+			
+	nws/archives
+			- read past newsletters in PDF format
+			
+	nws/board
+			- list of current board members
+			
+  nws/blogs/
+			- list all bloggers in brief profile
+			
+	nsw/blogs/allPosts			
+			- list all posts from all bloggers in brief view
+
+	nws/blog/<bloggerName>
+			- list a blogger in full profile and all posts in brief view
+				
+	nws/blog/<bloggerName>/<blogPostUID>
+			- read a post by a blogger in full view
+			
+			
+	nws/admin/
+		- provide links to all admin routes
+		- possible place for admin authentication
+		
+  nws/admin/content
+		- add/delete/edit a list of home page regular content
+		- upload or link to photos
+		- position regular content up/down on page
+		
+  nws/admin/content/hero
+		- add/delete/edit home page hero content	
+		- upload or link to photos for spinner
+		- put spinner photos in desired order
+		
+  nws/admin/services
+		- add/delete/edit a list of phone numbers
+		- position phone numbers up/down on page
+		
+	nws/admin/board
+		- add/delete/edit a list board members
+		- distinguish board/officers
+		- upload or link to photos		
+		- position members up/down on page
+		
+  nws/admin/archive
+		- add/delete/edit a list of PDF files
+		- position file listings up/down on page
+		- upload PDFs
+		
+	nws/admin/bloggers
+		- add/delete/edit a list of bloggers
+		- position bloggers order up/down on page
+
+	nws/admin/blogger/<bloggerName>
+		- edit a blogger's profile in detail
+		
+	nws/admin/blogs/
+		- add/delete/edit a list of all blog postings
+	
+	nws/admin/blog/<bloggerName>
+		- add/delete/edit a list of all posting by <bloggerName>
+	
+	nws/admin/blog/<bloggerName>/<blogPostUID>
+		- edit a blog post by a blogger
+		
+		
+	
+	
