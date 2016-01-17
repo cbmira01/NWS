@@ -1,12 +1,12 @@
 ## Synopsis
 
-This project, NWS (Neighborhood Web Site), demonstrates an Angular-powered website with RESTful PHP back-end interaction mith a MySQL database.
+This project demonstrates an Angular-powered website with RESTful PHP back-end interaction with a MySQL database.
 
 ## Features
 - Hero content
-- Additional content
+- Additional news content
 - Advertising content
-- List of board members
+- List of neighborhood association officers and board members
 - Useful phone numbers
 - Archival newsletters
 - Blogging application
