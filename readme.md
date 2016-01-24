@@ -1,10 +1,11 @@
 ## Synopsis
 
-This project demonstrates an Angular-powered website with RESTful PHP back-end interaction with a MySQL database.
+This project demonstrates an Angular-powered website using 
+  RESTful PHP back-end interaction with a MySQL database.
 
 ## Features
 - Hero content
-- Additional news content
+- Additional main-page content
 - Advertising content
 - List of neighborhood association officers and board members
 - Useful phone numbers
@@ -15,3 +16,6 @@ This project demonstrates an Angular-powered website with RESTful PHP back-end i
 - Installed WAMP/LAMP/MAMP stack
 - Restore database backup file in nws/SQL_backup to MySQL server
 
+## Extra
+
+Check out NWS/crudTest for a simple small web project in Angular and PHP.

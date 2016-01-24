@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html ng-app="crudApp">
+	<head>
+    <base href="./" />
+		<title>Test application for Angular/PHP CRUD operations</title>
+		<meta charset="utf-8">
+  </head>
+
+	<body>
+    <a href="#/">
+      <button type="button">Home</button>   
+    </a>
+    <a href="#/create">
+      <button type="button">Create a record</button>   
+    </a>
+    <a href="#/readAll">
+      <button type="button">Read all records</button>   
+    </a>    
+    <a href="#/update">
+      <button type="button">Update a record</button>   
+    </a>    
+    <a href="#/delete">
+      <button type="button">Delete a record</button>   
+    </a>    
+          
+		<!-- application content delivered here -->    
+    <div ng-view></div>
+
+		<!-- JavaScript support -->     
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script src="./javascript/crudApp.js"></script>    
+	</body>
+</html>

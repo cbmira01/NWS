@@ -1,0 +1,16 @@
+
+
+
+
+/  
+  - home landing page
+/create
+  - create and save record
+/readAll
+  - read all records and dump to table
+/update
+  - select a record to edit
+/delete
+  - select a record to delete
+  
+  
