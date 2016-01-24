@@ -26,7 +26,7 @@
 
   crudApp.controller("ReadAll", ["$scope", "$http",
     function ($scope, $http) {
-      $http.get('http://localhost/php-exercises/crudTest/php/readAll.php').
+      $http.get('http://localhost/nws/crudTest/php/readAll.php').
         success(function(data) {
           $scope.users = data;
         });
@@ -39,10 +39,10 @@
       $scope.msgs = [];
 
       $scope.createUser = function() {
-        $scope.errors.splice(0, $scope.errors.length); // remove all error messages
+        $scope.errors.splice(0, $scope.errors.length);
         $scope.msgs.splice(0, $scope.msgs.length);
 
-        $http.post('http://localhost/php-exercises/crudTest/php/createUser.php',
+        $http.post('http://localhost/nws/crudTest/php/createUser.php',
           {'uname': $scope.userName, 'email': $scope.userEmail} )
 
           .success(function(data, status, headers, config) {
