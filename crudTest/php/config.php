@@ -1,7 +1,7 @@
 <?php
 
         // set up the connection variables
-        $db_name  = 'application';
+        $db_name  = 'crudtest_db';
         $hostname = '127.0.0.1';
         $username = 'localhost';
         $password = 'password';

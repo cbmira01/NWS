@@ -11,7 +11,7 @@ $userName = $data->uname;
 $userEmail = $data->email;
 
 // This is the right way to extract a row count from MySQL via SELECT.
-$sql = 'SELECT COUNT(*) as rowCount FROM users WHERE email = :email';
+$sql = 'SELECT COUNT(*) as rowCount FROM users_t WHERE email = :email';
 $stmt = $dbh->prepare($sql);
 $stmt->execute( array(':email' => $userEmail) );
 $result = $stmt->fetchAll();
@@ -19,7 +19,7 @@ $rowCount = $result[0]['rowCount'];
 
 // Attempt to insert the record, emit result messages for the Angular app.
 if ($rowCount == 0) {
-    $sql = 'INSERT INTO users (name, email) VALUES (:uname, :email)';
+    $sql = 'INSERT INTO users_t (name, email) VALUES (:uname, :email)';
     $stmt = $dbh->prepare($sql);
     $success = $stmt->execute( array(':uname' => $userName, ':email' => $userEmail) );
   

@@ -9,8 +9,9 @@ crudTest is a small application to study Angular, PHP and MySQL interaction.
     - no jQuery;
     - no PHP frameworks;
     - no CSS.
-- PHP not used for client-side views, PHP confined to database operations.
+- Angular for client-side MVC, PHP confined to database operations.
 - Small and simple initial test database (1 table with 5 rows, 3 columns).
+- PDO invocations throughout.
 - Developed on a WAMP stack under Windows 7.
 - Apache 2.4.9, MySQL 5.6.17, PHP 5.5.12, Angular 1.4.8.
 

@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `application` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `application`;
+CREATE DATABASE  IF NOT EXISTS `crudtest_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `crudtest_db`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
--- Host: localhost    Database: application
+-- Host: localhost    Database: crudtest_db
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -18,13 +18,13 @@ USE `application`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `users`
+-- Table structure for table `users_t`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `users_t`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
+CREATE TABLE `users_t` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL,
   `email` text NOT NULL,
@@ -33,13 +33,13 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `users_t`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Big Kev','bigkev@example.com'),(2,'Judy','punk@example.net'),(3,'Suzy','suzy@example.com'),(4,'Joey','sheena@example.org'),(5,'DeeD','deedee@example.net');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+LOCK TABLES `users_t` WRITE;
+/*!40000 ALTER TABLE `users_t` DISABLE KEYS */;
+INSERT INTO `users_t` VALUES (1,'Big Kev','bigkev@example.com'),(2,'Judy','punk@example.net'),(3,'Suzy','suzy@example.com'),(4,'Joey','sheena@example.org'),(5,'DeeD','deedee@example.net');
+/*!40000 ALTER TABLE `users_t` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

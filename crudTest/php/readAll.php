@@ -3,7 +3,7 @@
 require_once('config.php');
 
 // a query get all the records from the users table
-$sql = 'SELECT id, name, email FROM users';
+$sql = 'SELECT id, name, email FROM users_t';
 
 // use prepared statements, even if not strictly required is good practice
 $stmt = $dbh->prepare( $sql );
