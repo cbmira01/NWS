@@ -4,12 +4,12 @@
 
   // JSON string has been posted from Angular app.
   $jsonString = file_get_contents("php://input");
-  // $jsonString = '{"userId": "4"}' ;
+      // $jsonString = '{"id": "4"}' ;
   $data = json_decode($jsonString);
 
   $sql = "DELETE FROM users_t WHERE id = :id_p";
   $stmt = $pdo->prepare($sql);
-  $stmt->bindParam(':id_p', $data->userId);   
+  $stmt->bindParam(':id_p', $data->id);   
   $success = $stmt->execute();
 
   $sql = "SELECT ROW_COUNT()";

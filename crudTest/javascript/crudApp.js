@@ -47,7 +47,7 @@
         $scope.msgs.splice(0, $scope.msgs.length);
 
         $http.post('http://localhost/nws/crudTest/php/createUser.php',
-          {'uname': $scope.userName, 'email': $scope.userEmail} )
+          {'name': $scope.userName, 'email': $scope.userEmail} )
 
           .success(function(data, status, headers, config) {
             if (data.msg !== '') {
@@ -59,7 +59,7 @@
 
           .error(function(data, status) {
             $scope.errors.push(status);
-            alert(status);
+            alert("Error caught in crudApp.js, Create controller: " + status);
           });
       };
     }
@@ -69,25 +69,24 @@
     function ($scope, $http) {
       $scope.errors = [];
       $scope.msgs = [];
-      $scope.userToDelete;
-      $scope.thisUser;      
+      $scope.userToDelete = "None selected.";     
       
       $http.get('http://localhost/nws/crudTest/php/readAll.php')
         .success(function(data) {
           $scope.users = data;
         });
         
-      $scope.change = function() {
-        $scope.userToDelete = $scope.thisUser;
-        alert("change! "+$scope.thisUser);
+      $scope.changeUserToDelete = function(utd) {
+        $scope.userToDelete = utd;
+        //alert("changed: " + $scope.userToDelete)
       };        
 
-      $scope.xdeleteUser = function() {
+      $scope.deleteUser = function(utd) {
         $scope.errors.splice(0, $scope.errors.length);
         $scope.msgs.splice(0, $scope.msgs.length);
 
         $http.post('http://localhost/nws/crudTest/php/deleteUser.php',
-          {'id': $scope.userToDelete} )
+          {'id': utd} )
 
           .success(function(data, status, headers, config) {
             if (data.msg !== '') {
@@ -99,7 +98,7 @@
 
           .error(function(data, status) {
             $scope.errors.push(status);
-            alert(status);
+            alert("Error caught in crudApp.js, Delete controller: " + status);
           });
       };
     }

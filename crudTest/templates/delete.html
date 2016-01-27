@@ -2,20 +2,19 @@
 <div >
 
   <form>
-    
     <table>
       <thead>
         <tr>
-          <th>--</th>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
+          <th><pre>    </pre></th>
+          <th><pre>ID     </pre></th>
+          <th><pre>Name         </pre></th>
+          <th><pre>Email        </pre></th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="user in users">
           <td>
-            <input type="radio" name="userRecords" ng-change="change()" ng-model="thisUser" value="{{user.id}}">
+            <input type="radio" name="userRecords" ng-click="changeUserToDelete(user.id)" ng-model="userToDelete">
           </td>
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
@@ -23,9 +22,18 @@
         </tr>
       </tbody>
     </table>
-  
   </form> 
   
-  <a href="" ng-click="deleteUser()">Delete User  {{userToDelete}}</a>
+  <p>
+    <a href="" ng-click="deleteUser(userToDelete)">Delete User</a> 
+    <pre>   {{userToDelete}}</pre>
+  </p>
+  
+  <ul>
+      <li ng-repeat="error in errors"> {{error}} </li>
+  </ul>
+  <ul>
+      <li ng-repeat="msg in msgs"> {{msg}} </li>
+  </ul>  
 
 </div>
