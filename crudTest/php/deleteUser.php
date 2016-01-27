@@ -3,8 +3,8 @@
   require_once('config.php');
 
   // JSON string has been posted from Angular app.
-  // $jsonString = file_get_contents("php://input");
-  $jsonString = '{"userId": "4"}' ;
+  $jsonString = file_get_contents("php://input");
+  // $jsonString = '{"userId": "4"}' ;
   $data = json_decode($jsonString);
 
   $sql = "DELETE FROM users_t WHERE id = :id_p";

@@ -1,0 +1,31 @@
+ 
+<div >
+
+  <form>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>--</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td>
+            <input type="radio" name="userRecords" ng-change="change()" ng-model="thisUser" value="{{user.id}}">
+          </td>
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </form> 
+  
+  <a href="" ng-click="deleteUser()">Delete User  {{userToDelete}}</a>
+
+</div>
