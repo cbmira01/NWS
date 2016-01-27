@@ -11,7 +11,7 @@
   $userName = $data->uname;
   $userEmail = $data->email;
 
-  // This is the right way to extract a row count from MySQL via SELECT.
+  // Here is the right way to extract a row count from MySQL via SELECT.
   $sql = 'SELECT COUNT(*) as rowCount FROM users_t WHERE email = :email_p';
   $stmt = $pdo->prepare($sql);
   $stmt->bindParam(':email_p', $userEmail);   
