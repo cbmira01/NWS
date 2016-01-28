@@ -1,25 +1,28 @@
 
 <div>
-    <form>
-      <div>
-          <label>User's name
-            <input type="text" ng-model="userName"/>
-          </label>
-      </div>
 
-      <div>
-          <label>User's email address
-            <input type="text" ng-model="userEmail"/>
-          </label>
-      </div>
-    </form>
+  <h2>Create a User Record</h2>
+  
+  <form>
+    <div>
+        <label>User's name
+          <input type="text" ng-model="userName"/>
+        </label>
+    </div>
 
-    <a href="" ng-click="createUser()">Create User</a>
+    <div>
+        <label>User's email address
+          <input type="text" ng-model="userEmail"/>
+        </label>
+    </div>
+  </form>
 
-    <ul>
-        <li class="err" ng-repeat="error in errors"> {{error}} </li>
-    </ul>
-    <ul>
-        <li class="info" ng-repeat="msg in msgs"> {{msg}} </li>
-    </ul>
+  <a href="" ng-click="createUser()">Create User</a>
+
+  <ul>
+      <li class="err" ng-repeat="error in errors"> {{error}} </li>
+  </ul>
+  <ul>
+      <li class="info" ng-repeat="msg in msgs"> {{msg}} </li>
+  </ul>
 </div>

@@ -1,21 +1,23 @@
 
 <div >
 
-    <table>
-      <thead>
-        <tr>
-          <th><pre>ID     </pre></th>
-          <th><pre>Name         </pre></th>
-          <th><pre>Email        </pre></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="user in users">
-          <td>{{user.id}}</td>
-          <td>{{user.name}}</td>
-          <td>{{user.email}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <h2>Read All User Records</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th><pre>ID     </pre></th>
+        <th><pre>Name         </pre></th>
+        <th><pre>Email        </pre></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>

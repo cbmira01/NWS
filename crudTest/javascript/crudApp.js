@@ -7,23 +7,23 @@
       $routeProvider
         .when("/", {
             templateUrl: "templates/home.html",
-            controller: "Home"
+            controller: "HomeController"
         })
         .when("/create", {
             templateUrl: "templates/create.html",
-            controller: "Create"
+            controller: "CreateController"
         })        
         .when("/readAll", {
             templateUrl: "templates/readAll.html",
-            controller: "ReadAll"
+            controller: "ReadController"
         })
         .when("/update", {
             templateUrl: "templates/update.html",
-            controller: "Update"
+            controller: "UpdateController"
         }) 
         .when("/delete", {
             templateUrl: "templates/delete.html",
-            controller: "Delete"
+            controller: "DeleteController"
         })        
         .otherwise({
             redirectTo: "/"
@@ -32,7 +32,7 @@
 
   crudApp.controller("Home");
 
-  crudApp.controller("ReadAll", ["$scope", "$http",
+  crudApp.controller("ReadController", ["$scope", "$http",
     function ($scope, $http) {
       $http.get("http://localhost/nws/crudTest/php/readAll.php")
         .success(function(data) {
@@ -41,7 +41,7 @@
     }
   ]);
 
-  crudApp.controller("Create", ["$scope", "$http",
+  crudApp.controller("CreateController", ["$scope", "$http",
     function ($scope, $http) {
       $scope.errors = [];
       $scope.msgs = [];
@@ -71,7 +71,7 @@
     }
   ]);
   
-  crudApp.controller("Update", ["$scope", "$http",
+  crudApp.controller("UpdateController", ["$scope", "$http",
     function ($scope, $http) {
       $scope.errors = [];
       $scope.msgs = [];
@@ -114,7 +114,7 @@
     }
   ]);  
   
-  crudApp.controller("Delete", ["$scope", "$http",
+  crudApp.controller("DeleteController", ["$scope", "$http",
     function ($scope, $http) {
       $scope.errors = [];
       $scope.msgs = [];
