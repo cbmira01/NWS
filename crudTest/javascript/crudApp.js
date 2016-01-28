@@ -34,7 +34,7 @@
 
   crudApp.controller("ReadAll", ["$scope", "$http",
     function ($scope, $http) {
-      $http.get('http://localhost/nws/crudTest/php/readAll.php')
+      $http.get("http://localhost/nws/crudTest/php/readAll.php")
         .success(function(data) {
           $scope.users = data;
         });
@@ -49,18 +49,20 @@
       $scope.createUser = function() {
         $scope.errors.splice(0, $scope.errors.length);
         $scope.msgs.splice(0, $scope.msgs.length);
-               
-        $http.post('http://localhost/nws/crudTest/php/createUser.php',
-          {'name': $scope.userName, 'email': $scope.userEmail} )
-
+            
+        var createJson = {
+          "name": $scope.userName, 
+          "email": $scope.userEmail
+        };
+        
+        $http.post("http://localhost/nws/crudTest/php/createUser.php", createJson)
           .success(function(data, status, headers, config) {
-            if (data.msg !== '') {
+            if (data.msg !== "") {
                 $scope.msgs.push(data.msg);
             } else {
                 $scope.errors.push(data.error);
             }
           })
-
           .error(function(data, status) {
             $scope.errors.push(status);
             alert("Error caught in crudApp.js, Create controller: " + status);
@@ -77,36 +79,33 @@
       $scope.userNewName = "";
       $scope.userNewEmail = "";      
       
-      $http.get('http://localhost/nws/crudTest/php/readAll.php')
+      $http.get("http://localhost/nws/crudTest/php/readAll.php")
         .success(function(data) {
           $scope.users = data;
         });
         
       $scope.changeUserToUpdate = function(utu) {
         $scope.userToUpdate = utu;
-        //alert("changed: " + $scope.userToUpdate)
       };        
 
       $scope.updateUser = function(utu) {
         $scope.errors.splice(0, $scope.errors.length);
         $scope.msgs.splice(0, $scope.msgs.length);
 
-        var updateJson = '{'
-          + '"id": "' + utu + '", '
-          + '"name": "' + $scope.userNewName + '", ' 
-          + '"email": "' + $scope.userNewEmail + '"'
-          + '}';
+        var updateJson = {
+          "id": utu, 
+          "name": $scope.userNewName,
+          "email": $scope.userNewEmail,
+        };
           
-        $http.post('http://localhost/nws/crudTest/php/updateUser.php', updateJson )
-
+        $http.post("http://localhost/nws/crudTest/php/updateUser.php", updateJson )
           .success(function(data, status, headers, config) {
-            if (data.msg !== '') {
+            if (data.msg !== "") {
                 $scope.msgs.push(data.msg);
             } else {
                 $scope.errors.push(data.error);
             }
           })
-
           .error(function(data, status) {
             $scope.errors.push(status);
             alert("Error caught in crudApp.js, Update controller: " + status);
@@ -121,31 +120,31 @@
       $scope.msgs = [];
       $scope.userToDelete = "None selected.";     
       
-      $http.get('http://localhost/nws/crudTest/php/readAll.php')
+      $http.get("http://localhost/nws/crudTest/php/readAll.php")
         .success(function(data) {
           $scope.users = data;
         });
         
       $scope.changeUserToDelete = function(utd) {
         $scope.userToDelete = utd;
-        //alert("changed: " + $scope.userToDelete)
       };        
 
       $scope.deleteUser = function(utd) {
         $scope.errors.splice(0, $scope.errors.length);
         $scope.msgs.splice(0, $scope.msgs.length);
 
-        $http.post('http://localhost/nws/crudTest/php/deleteUser.php',
-          {'id': utd} )
-
+        var deleteJson = {
+          "id": utd
+        };
+        
+        $http.post("http://localhost/nws/crudTest/php/deleteUser.php", deleteJson)
           .success(function(data, status, headers, config) {
-            if (data.msg !== '') {
+            if (data.msg !== "") {
                 $scope.msgs.push(data.msg);
             } else {
                 $scope.errors.push(data.error);
             }
           })
-
           .error(function(data, status) {
             $scope.errors.push(status);
             alert("Error caught in crudApp.js, Delete controller: " + status);
