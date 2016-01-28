@@ -8,5 +8,6 @@
 
   // connect to the database
   $pdo = new PDO("mysql:host=$hostname;dbname=$db_name;charset=utf8", $username, $password);
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
 ?>

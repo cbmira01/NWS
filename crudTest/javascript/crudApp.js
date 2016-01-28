@@ -9,14 +9,18 @@
             templateUrl: "templates/home.html",
             controller: "Home"
         })
+        .when("/create", {
+            templateUrl: "templates/create.html",
+            controller: "Create"
+        })        
         .when("/readAll", {
             templateUrl: "templates/readAll.html",
             controller: "ReadAll"
         })
-        .when("/create", {
-            templateUrl: "templates/create.html",
-            controller: "Create"
-        })
+        .when("/update", {
+            templateUrl: "templates/update.html",
+            controller: "Update"
+        }) 
         .when("/delete", {
             templateUrl: "templates/delete.html",
             controller: "Delete"
@@ -45,7 +49,7 @@
       $scope.createUser = function() {
         $scope.errors.splice(0, $scope.errors.length);
         $scope.msgs.splice(0, $scope.msgs.length);
-
+               
         $http.post('http://localhost/nws/crudTest/php/createUser.php',
           {'name': $scope.userName, 'email': $scope.userEmail} )
 
@@ -64,6 +68,52 @@
       };
     }
   ]);
+  
+  crudApp.controller("Update", ["$scope", "$http",
+    function ($scope, $http) {
+      $scope.errors = [];
+      $scope.msgs = [];
+      $scope.userToUpdate = "None selected.";    
+      $scope.userNewName = "";
+      $scope.userNewEmail = "";      
+      
+      $http.get('http://localhost/nws/crudTest/php/readAll.php')
+        .success(function(data) {
+          $scope.users = data;
+        });
+        
+      $scope.changeUserToUpdate = function(utu) {
+        $scope.userToUpdate = utu;
+        //alert("changed: " + $scope.userToUpdate)
+      };        
+
+      $scope.updateUser = function(utu) {
+        $scope.errors.splice(0, $scope.errors.length);
+        $scope.msgs.splice(0, $scope.msgs.length);
+
+        var updateJson = '{'
+          + '"id": "' + utu + '", '
+          + '"name": "' + $scope.userNewName + '", ' 
+          + '"email": "' + $scope.userNewEmail + '"'
+          + '}';
+          
+        $http.post('http://localhost/nws/crudTest/php/updateUser.php', updateJson )
+
+          .success(function(data, status, headers, config) {
+            if (data.msg !== '') {
+                $scope.msgs.push(data.msg);
+            } else {
+                $scope.errors.push(data.error);
+            }
+          })
+
+          .error(function(data, status) {
+            $scope.errors.push(status);
+            alert("Error caught in crudApp.js, Update controller: " + status);
+          });
+      };
+    }
+  ]);  
   
   crudApp.controller("Delete", ["$scope", "$http",
     function ($scope, $http) {

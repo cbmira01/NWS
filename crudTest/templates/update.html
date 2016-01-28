@@ -1,0 +1,53 @@
+ 
+<div >
+
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <th><pre>    </pre></th>
+          <th><pre>ID     </pre></th>
+          <th><pre>Name         </pre></th>
+          <th><pre>Email        </pre></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td>
+            <input type="radio" name="userRecords" ng-click="changeUserToUpdate(user.id)" ng-model="userToUpdate">
+          </td>
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </form> 
+  
+    <form>
+      <div>
+          <label>User's NEW name
+            <input type="text" ng-model="userNewName"/>
+          </label>
+      </div>
+
+      <div>
+          <label>User's NEW email address
+            <input type="text" ng-model="userNewEmail"/>
+          </label>
+      </div>
+    </form>  
+  
+  <p>
+    <a href="" ng-click="updateUser(userToUpdate)">Update User</a> 
+    <pre>   {{userToUpdate}}</pre>
+  </p>
+  
+  <ul>
+      <li ng-repeat="error in errors"> {{error}} </li>
+  </ul>
+  <ul>
+      <li ng-repeat="msg in msgs"> {{msg}} </li>
+  </ul>  
+
+</div>
