@@ -24,6 +24,7 @@
   } else {
       $json = json_encode(array("msg" => "", "error" => "Error updating record."));    
   }
+  
   print_r($json);
 
 ?>

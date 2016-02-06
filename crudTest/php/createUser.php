@@ -30,6 +30,7 @@
   } else {
       $json = json_encode(array("msg" => "", "error" => "User already exists with same email."));
   }
+  
   print_r($json);
   
 ?>

@@ -65,7 +65,7 @@
           })
           .error(function(data, status) {
             $scope.errors.push(status);
-            alert("Error caught in crudApp.js, Create controller: " + status);
+            alert("Error caught in crudApp.js, CreatController: " + status);
           });
       };
     }
@@ -108,7 +108,7 @@
           })
           .error(function(data, status) {
             $scope.errors.push(status);
-            alert("Error caught in crudApp.js, Update controller: " + status);
+            alert("Error caught in crudApp.js, UpdateController: " + status);
           });
       };
     }
@@ -147,7 +147,7 @@
           })
           .error(function(data, status) {
             $scope.errors.push(status);
-            alert("Error caught in crudApp.js, Delete controller: " + status);
+            alert("Error caught in crudApp.js, DeleteController: " + status);
           });
       };
     }

@@ -22,6 +22,7 @@
   } else {
       $json = json_encode(array("msg" => "", "error" => "Error deleting record."));    
   }
+  
   print_r($json);
 
 ?>
