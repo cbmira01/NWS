@@ -1,4 +1,5 @@
 
   "use strict";
 
-  var nwsApp = angular.module("n", ["ngRoute"]);
+  var nwsApp = angular.module("nwsApp", ["ngRoute"]);
+  
