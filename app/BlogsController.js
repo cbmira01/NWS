@@ -1,0 +1,2 @@
+
+  nwsApp.controller("BlogsController");

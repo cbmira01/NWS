@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="nwsApp">
   <head>
-    <base href="/nws" />
+    <!-- <base href="/nws" />  -->
     <title>Neighborhood Web Site</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css" />
@@ -15,6 +15,8 @@
     <!-- Top Bar -->
     <div ng-include="'templates/top-bar.html'"></div>
 
+    <h2>INDEX</h2>
+    
     <!-- Angular application content delivered here -->
     <div ng-view></div>
     
@@ -28,5 +30,14 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script type="text/javascript" src="js/my-javascript.js"></script>
+    
+    <!-- Angular application files -->
+    <script type="text/javascript" src="app/nwsApp.js"></script>    
+    <script type="text/javascript" src="app/Routes.js"></script>
+    <script type="text/javascript" src="app/ArchiveController.js"></script>  
+    <script type="text/javascript" src="app/BlogsController.js"></script>    
+    <script type="text/javascript" src="app/HomeController.js"></script> 
+    <script type="text/javascript" src="app/OfficersController.js"></script>    
+    <script type="text/javascript" src="app/ServicesController.js"></script>     
   </body>
 </html>
