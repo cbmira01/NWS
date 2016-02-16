@@ -1,22 +1,22 @@
 
-  <div class="contain-to-grid fixed topbar">
+  <div class="contain-to-grid fixed topbar" my-reflow-panels>
     <nav class="top-bar">
       <img class="deerLogo hide-for-small-only left"
             src="img/deer-logo-256px.jpeg"
             alt="Deerpark logo" />
 
       <a class="main-logo left">
+        <!-- id dpnaText is styled by a reactive routine in my-javascript.js -->
         <h4 id="dpnaText">Deer Park Neighborhood Association</h4>
       </a>
 
-      <a href="#"
-         data-options="ignore_repositioning is_hover:false"
-         class="menuButton button right"
-         data-dropdown="drop">
+      <a href="#" class="menuButton button right" 
+         data-options="ignore_repositioning is_hover:false" 
+         data-dropdown="mydrop">
         <i class="fi-list"></i>
       </a>
       
-      <ul id="drop" class="f-dropdown right">
+      <ul id="mydrop" class="f-dropdown right" data-dropdown-content>
         <li><a href="#/">Home</a></li>
         <li><a href="#/services">Services</a></li>
         <li><a href="#/blogs">Blogs</a></li>
