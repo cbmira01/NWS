@@ -1,2 +1,4 @@
 
-  nwsApp.controller("ArchiveController");
+  nwsApp.controller("ArchiveController", ['$scope', function($scope) {
+    $scope.greeting = 'Hello!';
+  }]);

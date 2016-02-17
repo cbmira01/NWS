@@ -1,2 +1,4 @@
 
-  nwsApp.controller("BlogsController");
+  nwsApp.controller("BlogsController", ['$scope', function($scope) {
+    $scope.greeting = 'Hello!';
+  }]);

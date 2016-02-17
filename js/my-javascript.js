@@ -3,6 +3,8 @@
   $(window).on("load resize",function(e) {
     var isSmallMedia = Foundation.utils.is_small_only();
     var dpnaElement = document.getElementById("dpnaText");
+    if (dpnaElement === null) { return }
+    
     if ( isSmallMedia ) {
       dpnaElement.innerHTML = "DPNA";
       $(document).foundation({
