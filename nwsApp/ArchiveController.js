@@ -1,4 +1,4 @@
 
-  nwsApp.controller("ArchiveController", ['$scope', function($scope) {
-    $scope.greeting = 'Hello!';
+  nwsApp.controller("ArchiveController", ["$scope", function($scope) {
+    $scope.greeting = "Hello!";
   }]);

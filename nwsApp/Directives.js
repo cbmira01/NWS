@@ -4,7 +4,7 @@
       return {
           link: function(scope, element, attrs) {
             $timeout(function() {
-              $(window).bind('resize').trigger('resize');
+              $(window).bind("resize").trigger("resize");
             }, 1000, false);
           }
       };

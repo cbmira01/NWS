@@ -1,4 +1,4 @@
 
-  nwsApp.controller("OfficersController", ['$scope', function($scope) {
-    $scope.greeting = 'Hello!';
+  nwsApp.controller("OfficersController", ["$scope", function($scope) {
+    $scope.greeting = "Hello!";
   }]);
