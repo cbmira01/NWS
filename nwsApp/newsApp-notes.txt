@@ -1,0 +1,34 @@
+
+  nwsApp, an Angular-driven Neighborhood Web Site.
+    - demonstration for Code Louisville, Winter 2016
+    - by Calvin Miracle, Louisville KY
+
+  This application can do the following things:
+    - ...
+
+  This application demonstrates the following things:
+    - modular Angular app construction;
+    - communication with PHP backend for data persistence;
+    - color cycling on Foundation panels;
+    - successful application of Foundation attributes after Angular DOM construction.
+
+  Thanks to...
+      K. Scott Allen for an excellent Angular tutorial.
+          https://www.youtube.com/playlist?list=PLBTXLYhPD8MHGMW-ZEvdAtkxyAz-N8Toj
+      Thomas Kilian for how to handle "DOM ready for Foundation reflow".
+          http://stackoverflow.com/a/12243086
+      sylwester for an idea contributing to color cycling.
+          http://stackoverflow.com/a/24874022
+      Anders Ekdahl for advice on Angular factories.
+          http://stackoverflow.com/a/15026440
+      John David Miller on how to iterate over object keys in an Angular view.
+          http://stackoverflow.com/a/15127934
+      zavidovych for a tip on Angular view refresh.
+          http://stackoverflow.com/a/26345375
+      "briguy37" for Javascript UUID function.
+          http://jsfiddle.net/briguy37/2mvfd/
+      bbq-singular on how to trigger window resize events.
+          http://stackoverflow.com/questions/1818474/how-to-trigger-the-window-resize-event-in-javascript
+      DevMark for angular-slick-carousel
+          https://github.com/devmark/angular-slick-carousel
+
