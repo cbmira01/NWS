@@ -136,6 +136,11 @@ a.main-logo h4 {
 	height: auto;
 }
 
+.CL-banner {
+	height: 20%;
+	width: 20%;
+}
+
 /* Footer
 ================================= */
 footer {
