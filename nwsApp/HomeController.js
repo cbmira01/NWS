@@ -1,6 +1,5 @@
 
-  nwsApp.controller("HomeController", ["$scope", function($scope) {
-    $scope.greeting = "Hello!";
+  nwsApp.controller("HomeController", ["$scope", "$sce", function($scope, $sce) {
 
     // Wedge array for Slick images: { imageSource, imageAlt }
     var slides = [
@@ -66,9 +65,10 @@
       { 
         videosite:"youtube", 
         videotype:"", 
-        src:"http://www.youtube.com/watch?v=MaHrMR7JRS8", 
+        //   src:"https://www.youtube.com/watch?v=MaHrMR7JRS8",
+        src:$sce.trustAsResourceUrl("https://www.youtube.com/watch?v=MaHrMR7JRS8"),  
         title:"Pinback: A Request", 
-        text:"Deer Park gets a great band for a change...!" 
+        text:"Deer Park finally hears from a great band...!" 
       },
 
       { 
@@ -80,7 +80,25 @@
       },
     ];
 
+    // Wedge array for advertising panels
+    var ads = [
+      // { src:"", alt:"" },
+
+      { 
+        src:"img/comeinwereopen.svg", 
+        alt:"Advertising, sign" 
+      },
+
+      { 
+        src:"img/studio-bcard-white.svg", 
+        alt:"Advertising, business card" 
+      },
+
+    ];
+
     $scope.slides = slides;
     $scope.inlines = inlines;
     $scope.videos = videos;
+    $scope.ads = ads;
+
   }]);

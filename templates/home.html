@@ -13,7 +13,7 @@
 
       <div class="columns small-12 medium-6 large-6 featureColorText panel" data-equalizer-watch="eq-feature">
         <h4>New Construction in Deer Park</h4>
-        <p class="text-justify">This feature article lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ipsum porta, interdum nulla sed, sagittis ipsum. Fusce et luctus lectus, sed placerat purus. Donec consequat et metus eu tempor. Nulla mollis massa nec efficitur venenatis. Donec lectus nisl, mollis sodales justo id, tempus tempor ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In in augue vitae ipsum hendrerit tristique. Suspendisse non neque sit amet felis feugiat fermentum. Aliquam eget lectus tristique, rhoncus mi eget, lacinia massa. Nunc sapien nisl, iaculis sed lectus id, porttitor hendrerit justo. Nunc odio est, blandit ac ullamcorper nec, ullamcorper vel orci. Sed vitae tempus erat, et semper nisi. </p>
+        <p class="text-justify">This feature article lorem ipsum dolor sit amet...</p>
         <a href="#">Read more...</a>
       </div>
     </div>
@@ -30,39 +30,31 @@
 
     <!-- Videos -->
     <div class="row" data-equalizer="eq-videos">
-
-      <div ng-repeat="video in videos" class="columns small-12 medium-6 large-4 panel left" data-equalizer-watch="eq-videos">
-        <div ng-show="video.videosite == 'onsite'">
+      <div ng-repeat="video in videos" ng-switch="video.videosite" class="columns small-12 medium-6 large-4 panel left">
+        <div ng-switch-when="onsite" data-equalizer-watch="eq-videos">
           <video controls class="onsiteVideo">
-            <source src="{{video.src}}"  type="{{video.videotype}}">
+            <source ng-src="{{video.src}}"  type="{{video.videotype}}">
           </video>
         </div>
 
-        <div ng-show="video.videosite == 'youtube'">
-          <div>
-            <iframe class="youtubeVideo" src="{{video.src}}" allowfullscreen></iframe>
-          </div>
+        <div ng-switch-when="youtube" data-equalizer-watch="eq-videos">
+            <iframe class="youtubeVideo" ng-src="{{video.src}}" allowfullscreen></iframe>
         </div>
 
-        <div ng-show="!video.videosite">
-          <img src="{{video.src}}" alt="{{video.title}}"/>
+        <!-- No video available -->
+        <div ng-switch-default data-equalizer-watch="eq-videos">
+          <img ng-src="{{video.src}}" alt="{{video.title}}"/>
         </div>
 
         <h5>{{video.title}}</h5>
         <p>{{video.text}}</p>
-
       </div>
-
     </div>
 
     <!-- Advertising -->
     <div class="row" data-equalizer="eq-ads">
-      <div class="columns small-12 medium-6 large-6 panel" data-equalizer-watch="eq-ads">
-        <img class="adGraphics" src="img/comeinwereopen.svg" alt="Advertising, sign"/>
-      </div>
-
-      <div class="columns small-12 medium-6 large-6 panel" data-equalizer-watch="eq-ads">
-        <img class="adGraphics" src="img/studio-bcard-white.svg" alt="Advertising, business card"/>
+      <div ng-repeat="ad in ads" class="columns small-12 medium-6 large-4 panel left" data-equalizer-watch="eq-ads">
+        <img class="adGraphics" src="{{ad.src}}" alt="{{ad.alt}}"/>
       </div>
     </div>
 
