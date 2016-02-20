@@ -65,8 +65,8 @@
       { 
         videosite:"youtube", 
         videotype:"", 
-        //   src:"https://www.youtube.com/watch?v=MaHrMR7JRS8",
-        src:$sce.trustAsResourceUrl("https://www.youtube.com/watch?v=MaHrMR7JRS8"),  
+        src:"https://www.youtube.com/watch?v=MaHrMR7JRS8",
+        // src:"MaHrMR7JRS8",
         title:"Pinback: A Request", 
         text:"Deer Park finally hears from a great band...!" 
       },

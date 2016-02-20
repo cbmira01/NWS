@@ -38,7 +38,8 @@
         </div>
 
         <div ng-switch-when="youtube" data-equalizer-watch="eq-videos">
-            <iframe class="youtubeVideo" ng-src="{{video.src}}" allowfullscreen></iframe>
+          <!-- <iframe class="youtubeVideo" ng-src="{{video.src}}" allowfullscreen></iframe> -->
+          <youtube-video video-url="video.src"></youtube-video>
         </div>
 
         <!-- No video available -->
