@@ -30,25 +30,26 @@
 
     <!-- Videos -->
     <div class="row" data-equalizer="eq-videos">
-      <div ng-repeat="video in videos" ng-switch="video.videosite" class="columns small-12 medium-6 large-4 panel left">
+      <div ng-repeat="video in videos" ng-switch="video.videosite" class="columns small-12 medium-6 large-4 panel">
         <div ng-switch-when="onsite" data-equalizer-watch="eq-videos">
-          <video controls class="onsiteVideo">
-            <source ng-src="{{video.src}}"  type="{{video.videotype}}">
-          </video>
+            <video controls style="display:block; margin: 0;">
+              <source src="{{video.src}}" type="{{video.videotype}}">
+            </video>
         </div>
 
         <div ng-switch-when="youtube" data-equalizer-watch="eq-videos">
-          <!-- <iframe class="youtubeVideo" ng-src="{{video.src}}" allowfullscreen></iframe> -->
-          <youtube-video video-url="video.src"></youtube-video>
+          <youtube-video video-url="video.src" player-height="'100%'" player-width="'100%'"></youtube-video>
         </div>
 
         <!-- No video available -->
         <div ng-switch-default data-equalizer-watch="eq-videos">
-          <img ng-src="{{video.src}}" alt="{{video.title}}"/>
+          <img src="{{video.src}}" alt="{{video.title}}"/>
         </div>
 
-        <h5>{{video.title}}</h5>
-        <p>{{video.text}}</p>
+        <div>
+          <h5>{{video.title}}</h5>
+          <p>{{video.text}}</p>
+        </div>
       </div>
     </div>
 

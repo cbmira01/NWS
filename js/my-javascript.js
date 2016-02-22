@@ -48,11 +48,5 @@
  
 
   // Initialize Zurb Foundation.
-  // $(document).foundation();
-
-  $(document).foundation({
-    equalizer: {
-        equalize_on_stack: false
-    }
-  });
+  $(document).foundation();
 

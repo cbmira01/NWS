@@ -76,8 +76,25 @@
         videotype:"", 
         src:"http://previews.123rf.com/images/tribalium123/tribalium1231402/tribalium123140200006/26056388-do-not-record-video-sign-no-video-allowed-sign-do-not-record-video-icon-no-video-cameras-public-sign-Stock-Vector.jpg", 
         title:"No video available.", 
-        text:"There is no video available." 
+        text:"Sorry, there is no video available." 
       },
+
+      { 
+        videosite:"youtube", 
+        videotype:"", 
+        src:"https://www.youtube.com/watch?v=EZ10jbzcD18",
+        title:"Dave's World: He Gooched His Bass Guitar", 
+        text:"Fix a bass, enjoy a beer." 
+      },
+
+      { 
+        videosite:"youtube", 
+        videotype:"", 
+        src:"https://www.youtube.com/watch?v=GLf3nrZXZT8",
+        title:"You Only Live Once (Cover)", 
+        text:"Five dudes, who look remarkably alike, cover The Strokes." 
+      },
+
     ];
 
     // Wedge array for advertising panels
