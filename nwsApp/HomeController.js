@@ -1,5 +1,5 @@
 
-  nwsApp.controller("HomeController", ["$scope", "$sce", function($scope, $sce) {
+  nwsApp.controller("HomeController", ["$scope", "$sce", "myServices", function($scope, $sce, myServices) {
 
     // Wedge array for Slick images: { imageSource, imageAlt }
     var slides = [
@@ -117,5 +117,9 @@
     $scope.inlines = inlines;
     $scope.videos = videos;
     $scope.ads = ads;
+
+    $scope.colorCycle = function(index) {
+        return myServices.svcColorCycle(index);
+    };
 
   }]);
