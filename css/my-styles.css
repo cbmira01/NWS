@@ -72,36 +72,39 @@ a.main-logo h4 {
   background: #fff3b6;
 }
 
-.articleColorA {
+.pastelA {
   background: #e6cef1;
-  border-style: none;
 }
 
-.articleColorB {
+.pastelB {
   background: #fff3b6;  
 }
 
-.articleColorC {
+.pastelC {
   background: #def8b1;  
 }
 
-.officerPanelA {  
+.purpleA {  
   background: #c9a0dc;
 }
 
-.officerPanelB {  
+.purpleB {  
   background: #e6cef1;
 }
 
-.boardMemeberPanelA {  
+.purpleC {
+  background: #BD76DF;
+}
+
+.greenA {  
   background: #b1de60;
 }
 
-.boardMemeberPanelB {  
+.greenB {  
   background: #cdf18b;
 }
 
-.boardMemeberPanelC {  
+.greenC {  
   background: #def8b1;
 }
 

@@ -118,8 +118,8 @@
     $scope.videos = videos;
     $scope.ads = ads;
 
-    $scope.colorCycle = function(index) {
-        return myServices.svcColorCycle(index);
+    $scope.colorCycle = function( index ) {
+      return myServices.svcColorCycle( [ "pastelA", "pastelB", "pastelC", "pastelB", "pastelC" ], index );
     };
 
   }]);

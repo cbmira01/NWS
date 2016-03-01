@@ -1,7 +1,7 @@
 
   <div class="bumpPastTopbar" my-reflow-panels>
 
-    <!-- Feature Article -->
+    <!-- Feature Article Panels -->
     <div class="row" data-equalizer="eq-feature">
       <div class="columns small-12 medium-6 large-6 featureColorImage panel" 
            data-equalizer-watch="eq-feature">
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-  <!-- In-line Articles -->
+  <!-- In-line Article Panels -->
     <div class="row" data-equalizer="eq-inline">
       <div ng-repeat="inline in inlines" 
            class="columns small-12 medium-6 large-4 panel left {{colorCycle($index)}}"
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <!-- Videos -->
+    <!-- Video Panels -->
     <div class="row" data-equalizer="eq-videos">
       <div ng-repeat="video in videos" 
            ng-switch="video.videosite" 
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <!-- Advertising -->
+    <!-- Advertising Panels -->
     <div class="row" data-equalizer="eq-ads">
       <div ng-repeat="ad in ads" 
            class="columns small-12 medium-6 large-4 panel left" 
