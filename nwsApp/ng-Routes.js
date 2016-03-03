@@ -9,10 +9,6 @@
             templateUrl: "templates/services.html",
             controller: "ServicesController"
         })        
-        .when("/blogs", {
-            templateUrl: "templates/blogs.html",
-            controller: "BlogsController"
-        })
         .when("/officers", {
             templateUrl: "templates/officers.html",
             controller: "OfficersController"

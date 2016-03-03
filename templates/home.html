@@ -20,7 +20,7 @@
       </div>
     </div>
 
-  <!-- In-line Article Panels -->
+    <!-- In-line Article Panels -->
     <div class="row" data-equalizer="eq-inline">
       <div ng-repeat="inline in inlines" 
            class="columns small-12 medium-6 large-4 panel left {{colorCycle($index)}}"
@@ -38,6 +38,7 @@
            ng-switch="video.videosite" 
            class="columns small-12 medium-6 large-4 panel left {{colorCycle($index)}}" 
            data-equalizer-watch="eq-videos">
+
         <div ng-switch-when="onsite">
             <video controls>
               <source src="{{video.src}}" type="{{video.videotype}}">
@@ -58,6 +59,7 @@
           <h5>{{video.title}}</h5>
           <p>{{video.text}}</p>
         </div>
+
       </div>
     </div>
 
