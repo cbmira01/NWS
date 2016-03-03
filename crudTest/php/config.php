@@ -1,8 +1,8 @@
 <?php
 
-  $dsn = 'mysql:host=127.0.0.1;dbname=crudtest_db';
+  $dsn = "mysql:host=127.0.0.1;dbname=crudtest_db";
   $username = "crud_user";
-  $password = "";  
+  $password = "password";  
   $options = array(
       PDO::ATTR_ERRMODE, 
       PDO::ERRMODE_WARNING
