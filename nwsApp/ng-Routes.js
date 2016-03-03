@@ -17,6 +17,10 @@
             templateUrl: "templates/archive.html",
             controller: "ArchiveController"
         })        
+        .when("/admin", {
+            templateUrl: "templates/archive.html",
+            controller: "SiteAdminController"
+        }) 
         .otherwise({
             redirectTo: "/"
         });
