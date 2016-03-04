@@ -31,16 +31,4 @@ nws_db
         phone
         email
         
-    bloggers_t
-        id
-        name
-        slogan
-        bio
-        
-    blogposts_t
-        id
-        blogger_id
-        date
-        text
-        image
         
