@@ -17,9 +17,13 @@
             templateUrl: "templates/archive.html",
             controller: "ArchiveController"
         })        
-        .when("/admin", {
-            templateUrl: "templates/archive.html",
-            controller: "SiteAdminController"
+        .when("/add-content", {
+            templateUrl: "templates/add-content.html",
+            controller: "AddContentController"
+        }) 
+        .when("/delete-content", {
+            templateUrl: "templates/delete-content.html",
+            controller: "DeleteContentController"
         }) 
         .otherwise({
             redirectTo: "/"
