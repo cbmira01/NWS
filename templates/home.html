@@ -27,13 +27,13 @@
 
     <!-- In-line Article Panels -->
     <div class="row" data-equalizer="eq-inline">
-      <div ng-repeat="inline in inlines" 
+      <div ng-repeat="article in articles" 
            class="columns small-12 medium-6 large-4 panel left {{colorCycle($index)}}"
            data-equalizer-watch="eq-inline">
-        <img ng-class="{'hide-for-small-only': inline.hfso }" src="{{inline.src}}" alt="{{inline.alt}}"/>
-        <h5>{{inline.title}}</h5>
-        <p>{{inline.text}}</p>
-        <a href="inline.readmore">Read more...</a>
+        <img ng-class="{'hide-for-small-only': article.hfso }" src="{{article.image}}" alt="Article image"/>
+        <h5>{{article.title}}</h5>
+        <p>{{article.text}}</p>
+        <p> Link to UUID goes here...</p>
       </div>
     </div>
 

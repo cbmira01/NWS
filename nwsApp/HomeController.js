@@ -6,11 +6,13 @@
           $scope.feature = data[0];
         });
 
-/*     $http.get("http://localhost/nws/php/readInlines.php")
+      $http.get("http://localhost/nws/php/readArticles.php")
         .success(function(data) {
-          $scope.inlines = data;
+          $scope.articles = data;
         });
-
+              // implement truncated text 
+              //$scope.truncText = $scope.article.text.substr(0,19) + "...";
+/*
       $http.get("http://localhost/nws/php/readVideos.php")
         .success(function(data) {
           $scope.videos = data;
