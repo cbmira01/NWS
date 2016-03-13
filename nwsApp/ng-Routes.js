@@ -13,9 +13,9 @@
             templateUrl: "templates/officers.html",
             controller: "OfficersController"
         }) 
-        .when("/archive", {
-            templateUrl: "templates/archive.html",
-            controller: "ArchiveController"
+        .when("/archives", {
+            templateUrl: "templates/archives.html",
+            controller: "ArchivesController"
         })        
         .when("/add-content", {
             templateUrl: "templates/add-content.html",
