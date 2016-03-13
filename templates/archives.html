@@ -1,14 +1,13 @@
 
   <div class="row bumpPastTopbar" my-reflow-panels>
-    <h4>Deer Park Neighborhood Association newletters, past issues</h4>
+    <h4>Deer Park Neighborhood Association archives</h4>
 
     <div 
       ng-repeat="archive in archives"
       class="columns small-12 medium-12 large-12 panel left {{colorCycle($index)}}">
-        <h5>
-          <a href="{{archive.link}}">{{archive.title}}</a>
-        </h5>
+      <h5>
+        <a href="{{archive.link}}">{{archive.title}}</a>
+      </h5>
     </div>
 
   </div>
-

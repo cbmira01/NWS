@@ -2,12 +2,10 @@
   <div class="row bumpPastTopbar" my-reflow-panels>
     <h4>Public services for Deer Park Neighborhood</h4>
 
-    <div class="row">
-      <div class="panel officerPanelA"><h5>Emergencies: 911</h5></div>
-      <div class="panel officerPanelB"><h5>City Call (non-emergency): 311 or 555-2221</h5></div>
-      <div class="panel officerPanelA"><h5>Police, DP district (non-emergency): 555-1212</h5></div>
-      <div class="panel officerPanelB"><h5>Metro Council Member's Office: 555-2211</h5></div>
-      <div class="panel officerPanelA"><h5>Mayor's Office: 555-1122</h5></div>
-      <div class="panel officerPanelB"><h5>School Board: 555-1112</h5></div>
+    <div 
+      ng-repeat="service in services"
+      class="columns small-12 medium-12 large-12 panel left {{colorCycle($index)}}">
+      <h5>{{service.text}}</h5>
     </div>
+
   </div>  
