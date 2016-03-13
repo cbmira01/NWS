@@ -30,9 +30,18 @@
       <div ng-repeat="article in articles" 
            class="columns small-12 medium-6 large-4 panel left {{colorCycle($index)}}"
            data-equalizer-watch="eq-inline">
-        <img ng-class="{'hide-for-small-only': article.hfso }" src="{{article.image}}" alt="Article image"/>
+
+        <div ng-switch="article.hfso">
+          <div ng-switch-when="T">
+            <img class="hide-for-small-only" src="{{article.image}}" alt="Article image"/>
+          </div>
+          <div ng-switch-default>
+            <img src="{{article.image}}" alt="Article image"/>
+          </div>
+        </div>
+
         <h5>{{article.title}}</h5>
-        <p>{{article.text}}</p>
+        <p>{{article.text | limitTo:100}}...</p>
         <p> Link to UUID goes here...</p>
       </div>
     </div>
@@ -40,29 +49,29 @@
     <!-- Video Panels -->
     <div class="row" data-equalizer="eq-videos">
       <div ng-repeat="video in videos" 
-           ng-switch="video.videosite" 
+           ng-switch="video.site" 
            class="columns small-12 medium-6 large-4 panel left {{colorCycle($index)}}" 
            data-equalizer-watch="eq-videos">
 
         <div ng-switch-when="onsite">
             <video controls>
-              <source src="{{video.src}}" type="{{video.videotype}}">
+              <source src="{{video.link}}" type="{{video.type}}">
             </video>
             <h5>{{video.title}}</h5>
-            <p>{{video.text}}</p>
+            <p>{{video.description}}</p>
         </div>
 
         <div ng-switch-when="youtube">
-          <youtube-video video-url="video.src" player-height="'auto'" player-width="'auto'"></youtube-video>
+          <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>
           <h5>{{video.title}}</h5>
-          <p>{{video.text}}</p>
+          <p>{{video.description}}</p>
         </div>
 
         <!-- No video available -->
         <div ng-switch-default>
-          <img src="{{video.src}}" alt="{{video.title}}"/>
+          <img src="{{video.link}}" alt="{{video.title}}"/>
           <h5>{{video.title}}</h5>
-          <p>{{video.text}}</p>
+          <p>{{video.description}}</p>
         </div>
 
       </div>
@@ -73,7 +82,7 @@
       <div ng-repeat="ad in ads" 
            class="columns small-12 medium-6 large-4 panel left" 
            data-equalizer-watch="eq-ads">
-        <img class="adGraphics" src="{{ad.src}}" alt="{{ad.alt}}"/>
+        <img class="adGraphics" src="{{ad.link}}" alt="Advertising"/>
       </div>
     </div>
 

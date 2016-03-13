@@ -29,8 +29,8 @@ CREATE TABLE `videos_t` (
   `site` text,
   `type` text,
   `title` text,
-  `link` text,
   `description` text,
+  `link` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +41,7 @@ CREATE TABLE `videos_t` (
 
 LOCK TABLES `videos_t` WRITE;
 /*!40000 ALTER TABLE `videos_t` DISABLE KEYS */;
-INSERT INTO `videos_t` VALUES (1,'onsite','video/ogg','Natural Gas','Large quantities of natural gas discovered in Deer Park neighborhood!','videos/Natural_gas_video.ogg'),(2,'youtube','','Pinback: A Request','From the album \'Information Received\'.','https://www.youtube.com/watch?v=MaHrMR7JRS8'),(3,'','','No video','Sorry, there is no video available.','https://pixabay.com/static/uploads/photo/2015/11/21/11/26/monitor-1054710_960_720.jpg'),(4,'youtube','','Dave\'s World: He Gooched His Bass Guitar','Dave fixes a bass and enjoys a beer.','https://www.youtube.com/watch?v=EZ10jbzcD18'),(5,'youtube','','You Only Live Once (Cover)','Five dudes, who look remarkably alike, cover The Strokes.','https://www.youtube.com/watch?v=GLf3nrZXZT8');
+INSERT INTO `videos_t` VALUES (1,'onsite','video/ogg','Natural Gas','Large quantities of natural gas discovered in Deer Park neighborhood!','videos/Natural_Gas_video.ogg'),(2,'youtube','','Pinback: A Request','From the album \'Information Received\'.','https://www.youtube.com/watch?v=MaHrMR7JRS8'),(3,'','','No video','Sorry, there is no video available.','https://pixabay.com/static/uploads/photo/2015/11/21/11/26/monitor-1054710_960_720.jpg'),(4,'youtube','','Dave\'s World: He Gooched His Bass Guitar','Dave fixes a bass and enjoys a beer.','https://www.youtube.com/watch?v=EZ10jbzcD18'),(5,'youtube','','You Only Live Once (Cover)','Five dudes, who look remarkably alike, cover The Strokes.','https://www.youtube.com/watch?v=GLf3nrZXZT8');
 /*!40000 ALTER TABLE `videos_t` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,4 +210,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-03-12 22:02:35
+-- Dump completed on 2016-03-12 22:42:51
