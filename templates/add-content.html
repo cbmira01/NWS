@@ -1,6 +1,6 @@
 
-  <div class="row bumpPastTopbar">
-    <h4>Neighborhood Website: Add Content</h4>
+  <div id="top" class="row">
+    <h4><br><br><br>Neighborhood Website: Add Content</h4>
       <div class="row">
         <div class="columns small-12 medium-12 large-12 left">
           <a href="#/add-content/#update-feature" class="button tiny">Feature</a>
@@ -15,45 +15,143 @@
   </div>
 
   <div id="update-feature" class="row">
-    <h4><br><br>Update the feature article and images</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla pharetra fringilla. Vestibulum a enim at dolor commodo sodales. Quisque consectetur lacus eu posuere venenatis. Donec malesuada tempor orci, venenatis porta mauris convallis nec. Donec tellus enim, efficitur ut sem et, vestibulum porttitor lacus. Sed posuere volutpat urna. Aenean nec commodo orci. Phasellus cursus turpis vel auctor auctor. </p>
+    <h4><br><br>Update feature article and images</h4>
+    <div class="column large-12">
+      <label>Feature Article Text
+        <textarea ng-model=""></textarea>
+      </label>
+
+      <label>Carousel Image 1 URL
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Carousel Image 2 URL
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Carousel Image 3 URL
+        <input type="text" ng-model="" />
+      </label>     
+    </div>
+    <a href="" class="button tiny">Update</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
   <div id="add-article" class="row">
     <h4><br><br>Add an article</h4>
-<p>Nam auctor vulputate ipsum sit amet iaculis. Maecenas ipsum odio, gravida sit amet luctus at, hendrerit consectetur tellus. Integer ac odio nec nulla tempor pharetra. Nam consequat eu purus at sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc semper imperdiet suscipit. Aliquam sodales porttitor lacinia. Proin a erat id nisi blandit faucibus a et orci. Vestibulum blandit quis urna in ullamcorper. Cras et ullamcorper risus, a placerat augue. </p>
+    <div class="column large-12">
+      <label>Title
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Text
+        <textarea ng-model=""></textarea>
+      </label>
+
+      <label>Image URL
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>UUID
+        <pre>         {{UUID goes here}}</pre>
+      </label>
+
+      <input id="checkbox1" type="checkbox" ng-model=""><label for="checkbox1">Hide image for small media only?</label>     
+    </div>
+    <a href="" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
   <div id="add-video" class="row">
     <h4><br><br>Add a video</h4>
-<p>Mauris id varius enim. Aenean mi nisl, dictum vitae gravida quis, porta vel arcu. Integer turpis sem, rhoncus at dolor id, condimentum euismod ante. Vestibulum est quam, ornare quis gravida vel, auctor sed tortor. Nulla accumsan nisi quis bibendum condimentum. Praesent molestie arcu eu pulvinar lacinia. Donec posuere elementum aliquet. </p>
+    <div class="column large-12">
+      <label>Title
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Description
+        <textarea ng-model=""></textarea>
+      </label>
+
+      <label>Video URL
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Site Selection
+        <select>
+          <option value="youtube">Youtube</option>
+          <option value="onsite">Onsite</option>
+          <option value="none">No Video Available</option>
+        </select>
+      </label>
+
+      <label>Video Type
+        <select>
+          <option value="ogg">video/ogg</option>
+          <option value="notspec">Not Specified</option>
+        </select>
+      </label>
+    </div>
+    <a href="" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
   <div id="add-ad" class="row">
     <h4><br><br>Add an ad</h4>
-<p>Proin sodales sit amet ante vel tincidunt. Ut et sapien nec nisi consequat posuere. Sed dictum est vitae libero elementum rutrum. Nam eu arcu ac augue tristique rutrum. Nunc pharetra odio ut iaculis finibus. Nullam turpis sem, fringilla at hendrerit eget, viverra in risus. Cras sed faucibus mauris. Etiam quis eleifend felis. Mauris non odio arcu. Ut nec posuere est, posuere semper urna. Phasellus odio sem, elementum sodales lobortis sed, bibendum id nulla. </p>
+    <div class="column large-12">
+      <label>Ad URL
+        <input type="text" ng-model="" />
+      </label>
+    </div>
+    <a href="" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
   <div id="add-officer" class="row">
     <h4><br><br>Add an officer or board member</h4>
-<p>Nam scelerisque dui dolor, vel sollicitudin augue condimentum eu. Nunc facilisis lacus a scelerisque porta. Morbi in justo nec metus semper facilisis molestie id erat. Vestibulum vehicula finibus lectus, in rhoncus dui bibendum id. Integer semper ex eget sollicitudin faucibus. Suspendisse sem purus, auctor at nibh quis, blandit feugiat neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id erat luctus dolor efficitur auctor. Duis at mauris congue, interdum lorem sit amet, posuere lacus. Curabitur volutpat elit congue tortor tempus, sed vestibulum sapien sagittis. Vestibulum fermentum eget purus quis malesuada. Morbi maximus dignissim lorem, vitae semper purus cursus a. Duis laoreet, diam sit amet consequat euismod, ipsum est pharetra nunc, at malesuada nunc lectus at odio. Aliquam sodales leo eu elit eleifend porta. Proin semper congue maximus. </p>
+    <div class="column large-12">
+      <label>Name
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Description
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Email
+        <input type="text" ng-model="" />
+      </label>
+
+      <label>Photo URL
+        <input type="text" ng-model="" />
+      </label>
+    </div>
+    <a href="" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
   <div id="add-service" class="row">
     <h4><br><br>Add a service phone number</h4>
-<p>Nullam at venenatis diam. Ut erat massa, pretium nec urna et, vestibulum commodo est. Curabitur aliquet, lectus a feugiat iaculis, leo erat finibus sapien, ac eleifend lectus velit eu metus. Ut mattis neque ut enim dictum hendrerit. Ut iaculis neque id lacus auctor efficitur. Pellentesque eleifend eu risus id lobortis. Nam at purus sit amet nulla rhoncus tincidunt. Nulla vitae dapibus nulla. Nullam non ipsum nisi. Phasellus tellus lorem, porta quis elementum vel, scelerisque non neque. Cras eu justo nec dolor aliquam ultricies sit amet eget elit. Donec viverra sapien quis vehicula dictum. Phasellus laoreet nibh et neque fringilla sagittis. Vivamus nec lectus in massa posuere ullamcorper at nec mi. Etiam eleifend turpis sem, quis posuere libero facilisis eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+    <div class="column large-12">
+      <label>Text
+        <input type="text" ng-model="" />
+      </label>
+    </div>
+    <a href="" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
   <div id="add-archive" class="row">
     <h4><br><br>Add an archive item</h4>
+    <div class="column large-12">
+      <label>Title
+        <input type="text" ng-model="" />
+      </label>
 
-<p>Praesent et gravida felis. Praesent non semper ante. Fusce sit amet arcu tortor. Curabitur non sapien eleifend, vulputate sapien id, convallis lorem. Vestibulum imperdiet lacinia nisl, eget porta neque. Etiam a tincidunt turpis, ac rutrum ex. Etiam commodo purus quis laoreet consectetur. Praesent dictum feugiat velit et tincidunt. </p>
-
+      <label>Item URL
+        <input type="text" ng-model="" />
+      </label>
+    </div>
+    <a href="" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
