@@ -25,6 +25,10 @@
             templateUrl: "templates/delete-content.html",
             controller: "DeleteContentController"
         }) 
+        .when("/read-article/:uuid", {
+            templateUrl: "templates/read-article.html",
+            controller: "ReadArticleController"
+        })
         .otherwise({
             redirectTo: "/"
         });
