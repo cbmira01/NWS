@@ -26,7 +26,9 @@
         $sql = "SELECT id, text FROM services_t";
         break;
     default:
-        $sql = "SELECT id, link FROM ads_t";
+        $json = json_encode(array("msg" => "", "error" => "No usable table name, in readAll.php."));
+        print_r($json);
+        exit;
   }
   
   $stmt = $pdo->prepare( $sql );

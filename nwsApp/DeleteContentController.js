@@ -24,7 +24,7 @@
           "id": del
         };
         
-        $http.post("http://localhost/nws/php/deleteAd.php", deleteJson)
+        $http.post("http://localhost/nws/php/delete.php?table=ads", deleteJson)
           .success(function(data, status, headers, config) {
             if (data.msg !== "") {
                 $scope.msgs.push(data.msg);
