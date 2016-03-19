@@ -31,4 +31,6 @@
           http://stackoverflow.com/questions/1818474/how-to-trigger-the-window-resize-event-in-javascript
       DevMark for angular-slick-carousel
           https://github.com/devmark/angular-slick-carousel
+      Joseph Oster for Angular controller initialization
+          http://stackoverflow.com/questions/16150289/running-angularjs-initialization-code-when-view-is-loaded
 

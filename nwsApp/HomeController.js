@@ -1,29 +1,25 @@
 
   nwsApp.controller("HomeController", ["$scope", "$http", "$sce", "myServices", 
     function($scope, $http, $sce, myServices) {
-      $http.get("http://localhost/nws/php/readAll.php?table=feature")
-        .success(function(data) {
-          $scope.feature = data[0];
-        });
 
-      $http.get("http://localhost/nws/php/readAll.php?table=articles")
-        .success(function(data) {
-          $scope.articles = data;
-        });
+      var contentTables = [
+        "feature",
+        "articles",
+        "videos",
+        "ads"
+      ];
 
-      $http.get("http://localhost/nws/php/readAll.php?table=videos")
-        .success(function(data) {
-          $scope.videos = data;
+      (function init() {
+        contentTables.forEach(function(table) {
+          $http.get("http://localhost/nws/php/readAll.php?table=" + table)
+            .success(function(data) {
+              $scope[table] = data;
+            });
         });
-
-      $http.get("http://localhost/nws/php/readAll.php?table=ads")
-        .success(function(data) {
-          $scope.ads = data;
-        });
+      })();
 
       $scope.colorCycle = function( index ) {
         return myServices.svcColorCycle( [ "pastelA", "pastelB", "pastelC", "pastelB", "pastelC" ], index );
       };
-
     }
   ]);
