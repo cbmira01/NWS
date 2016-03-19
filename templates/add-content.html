@@ -14,28 +14,32 @@
       </div>
   </div>
 
-<!--   <div id="update-feature" class="row">
+  <div id="update-feature" class="row">
     <h4><br><br>Update feature article and images</h4>
     <div class="column large-12">
+      <label>Feature Article Title
+        <textarea ng-model="featureTitle"></textarea>
+      </label>
+
       <label>Feature Article Text
-        <textarea ng-model=""></textarea>
+        <textarea ng-model="featureArticle"></textarea>
       </label>
 
       <label>Carousel Image 1 URL
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="featureImage1" />
       </label>
 
       <label>Carousel Image 2 URL
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="featureImage2" />
       </label>
 
       <label>Carousel Image 3 URL
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="featureImage3" />
       </label>     
     </div>
-    <a href="" class="button tiny">Update</a>
+    <a href="" ng-click="updateFeature()" class="button tiny">Update</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
-  </div> -->
+  </div>
 
 <!--   <div id="add-article" class="row">
     <h4><br><br>Add an article</h4>
@@ -105,12 +109,6 @@
     </div>
     <a href="" ng-click="createAd()" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
-    <ul>
-        <li class="err" ng-repeat="error in errors"> {{error}} </li>
-    </ul>
-    <ul>
-        <li class="info" ng-repeat="msg in msgs"> {{msg}} </li>
-    </ul>
   </div>
 
 <!--   <div id="add-officer" class="row">

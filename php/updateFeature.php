@@ -7,9 +7,9 @@
   
   $sql = "UPDATE feature_t SET ";
   $sql = $sql . " article = :article, ";
-  $sql = $sql . " image1 = :image1 ";
-  $sql = $sql . " image2 = :image2 ";
-  $sql = $sql . " image3 = :image3 ";
+  $sql = $sql . " image1 = :image1, ";
+  $sql = $sql . " image2 = :image2, ";
+  $sql = $sql . " image3 = :image3, ";
   $sql = $sql . " title = :title ";
   $sql = $sql . " WHERE id = :id ";
 
