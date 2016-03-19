@@ -1,6 +1,6 @@
 
-  nwsApp.controller("AddContentController", ["$scope", "$http", "$sce", "myServices", 
-    function ($scope, $http) {
+  nwsApp.controller("AddContentController", ["$scope", "$http", "$route", "$sce", "myServices", 
+    function ($scope, $http, $route) {
       $scope.errors = [];
       $scope.msgs = [];
 
@@ -24,6 +24,8 @@
             $scope.errors.push(status);
             alert("Error caught in nwsApp.js.AddContentController: " + status);
           });
+
+        $route.reload();
       };
 
 // ----------------

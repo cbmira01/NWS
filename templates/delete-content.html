@@ -13,7 +13,7 @@
       </div>
   </div>
 
-  <div id="delete-article" class="row">
+<!--   <div id="delete-article" class="row">
     <h4><br><br>Delete an article</h4>
     <div
          class="columns large-12 panel {{colorCycle($index)}}">
@@ -65,9 +65,9 @@
     </div>
     <a href="" class="button tiny">Delete</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div>
+  </div> -->
 
-  <div id="delete-video" class="row">
+ <!--  <div id="delete-video" class="row">
     <h4><br><br>Delete a video</h4>
     <div
          class="columns large-12 panel {{colorCycle($index)}}">
@@ -104,60 +104,33 @@
     </div>
     <a href="" class="button tiny">Delete</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div>
+  </div> -->
 
   <div id="delete-ad" class="row">
     <h4><br><br>Delete an ad</h4>
-    <div
-         class="columns large-12 panel {{colorCycle($index)}}">
+    <div ng-repeat="ad in ads"
+         class="column large-12 medium-12 small-12 panel {{colorCycle($index)}}">
 
       <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
+        <div class="column large-1 medium-1 small-1 left">
+          <input type="radio" name="adRecords" ng-click="markAd(ad.id)" ng-model="adMarked">
         </div>  
 
-        <div class="column large-1 left">
-          <img class="smallPicture" src="https://pixabay.com/static/uploads/photo/2016/02/11/16/59/dog-1194083_960_720.jpg" alt="Article image"/>
+        <div class="column large-1 medium-1 small-1 left">
+          <img class="smallPicture" src="{{ad.link}}" alt="Ad image"/>
         </div>
   
-        <div class="column large-10 left">
-          <h6>1</h6>
+        <div class="column large-10 medium-10 small-10 left">
+          <h6>{{ad.id}}</h6>
         </div>
       </div>
 
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-1 left">
-          <img class="smallPicture" src="https://pixabay.com/static/uploads/photo/2016/02/11/16/59/dog-1194083_960_720.jpg" alt="Article image"/>
-        </div>  
-
-        <div class="column large-10 left">
-          <h6>2</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-1 left">
-          <img class="smallPicture" src="https://pixabay.com/static/uploads/photo/2016/02/11/16/59/dog-1194083_960_720.jpg" alt="Article image"/>
-        </div> 
-
-        <div class="column large-10 left">
-          <h6>3</h6>
-        </div> 
-      </div>
     </div>
-    <a href="" class="button tiny">Delete</a>
+    <a href="" ng-click="deleteAd(adMarked)" class="button tiny">{{adButton}}</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
   </div>
 
-  <div id="delete-officer" class="row">
+ <!--  <div id="delete-officer" class="row">
     <h4><br><br>Delete an officer or board member</h4>
     <div
          class="columns large-12 panel {{colorCycle($index)}}">
@@ -206,9 +179,9 @@
     </div>
     <a href="" class="button tiny">Delete</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div>
+  </div> -->
 
-  <div id="delete-service" class="row">
+ <!--  <div id="delete-service" class="row">
     <h4><br><br>Delete a service phone number</h4>
     <div
          class="columns large-12 panel {{colorCycle($index)}}">
@@ -245,9 +218,9 @@
     </div>
     <a href="" class="button tiny">Delete</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div>
+  </div> -->
 
-  <div id="delete-archive" class="row">
+<!--   <div id="delete-archive" class="row">
     <h4><br><br>Delete an archive item</h4>
     <div
          class="columns large-12 panel {{colorCycle($index)}}">
@@ -284,4 +257,4 @@
     </div>
     <a href="" class="button tiny">Delete</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div>
+  </div> -->
