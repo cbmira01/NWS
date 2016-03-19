@@ -6,7 +6,7 @@
       $scope.adMarked = ""; // nothing selected from the table
       $scope.adButton = "Select a record";    
       
-      $http.get("http://localhost/nws/php/readAds.php")
+      $http.get("http://localhost/nws/php/readAll.php?table=ads")
         .success(function(data) {
           $scope.ads = data;
         });

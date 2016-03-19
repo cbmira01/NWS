@@ -1,22 +1,22 @@
 
   nwsApp.controller("HomeController", ["$scope", "$http", "$sce", "myServices", 
     function($scope, $http, $sce, myServices) {
-      $http.get("http://localhost/nws/php/readFeature.php")
+      $http.get("http://localhost/nws/php/readAll.php?table=feature")
         .success(function(data) {
           $scope.feature = data[0];
         });
 
-      $http.get("http://localhost/nws/php/readArticles.php")
+      $http.get("http://localhost/nws/php/readAll.php?table=articles")
         .success(function(data) {
           $scope.articles = data;
         });
 
-      $http.get("http://localhost/nws/php/readVideos.php")
+      $http.get("http://localhost/nws/php/readAll.php?table=videos")
         .success(function(data) {
           $scope.videos = data;
         });
 
-      $http.get("http://localhost/nws/php/readAds.php")
+      $http.get("http://localhost/nws/php/readAll.php?table=ads")
         .success(function(data) {
           $scope.ads = data;
         });
