@@ -112,21 +112,16 @@
          class="column large-12 medium-12 small-12 panel {{colorCycle($index)}}">
 
       <div class="row">
-        <div class="column large-1 medium-1 small-1 left">
-          <input type="radio" name="adRecords" ng-click="markAd(ad.id)" ng-model="adMarked">
+        <div class="column large-1 medium-2 small-2 left">
+          <a href="" ng-click="deleteAd(ad.id)" class="button tiny">{{ad.id}}</a>
         </div>  
 
         <div class="column large-1 medium-1 small-1 left">
           <img class="smallPicture" src="{{ad.link}}" alt="Ad image"/>
         </div>
-  
-        <div class="column large-10 medium-10 small-10 left">
-          <h6>{{ad.id}}</h6>
-        </div>
       </div>
 
     </div>
-    <a href="" ng-click="deleteAd(adMarked)" class="button tiny">{{adButton}}</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
   </div>
 

@@ -1,43 +1,33 @@
 
   nwsApp.controller("DeleteContentController", ["$scope", "$http", "$location", "$routeParams", "$route", "$sce", "myServices", 
-    function ($scope, $http, $location, $routeParams, $route) {
-      $scope.errors = [];
-      $scope.msgs = [];
-      $scope.adMarked = ""; // nothing selected from the table
-      $scope.adButton = "Select a record";    
-      
+    function ($scope, $http, $location, $routeParams, $route, $sce, myServices) {
+  
       $http.get("http://localhost/nws/php/readAll.php?table=ads")
         .success(function(data) {
           $scope.ads = data;
         });
-        
-      $scope.markAd = function(del) {
-        $scope.adMarked = del;
-        $scope.adButton = "Delete " + del;
-      };        
 
-      $scope.deleteAd = function(del) {
-        $scope.errors.splice(0, $scope.errors.length);
-        $scope.msgs.splice(0, $scope.msgs.length);
+      $scope.deleteAd = function(id) {       
+        $scope.deleteContent("ads", id);
+      };
 
-        var deleteJson = {
-          "id": del
-        };
-        
-        $http.post("http://localhost/nws/php/delete.php?table=ads", deleteJson)
+      $scope.deleteContent = function(table, id) {
+        var json = {
+          "id": id
+        }; 
+        $http.post("http://localhost/nws/php/delete.php?table=" + table, json)
           .success(function(data, status, headers, config) {
-            if (data.msg !== "") {
-                $scope.msgs.push(data.msg);
-            } else {
-                $scope.errors.push(data.error);
-            }
           })
           .error(function(data, status) {
-            $scope.errors.push(status);
-            alert("Error caught in nws.js.DeleteController: " + status);
+            alert("Error caught in nwsApp.js.DeleteController: " + status);
           });
 
         $route.reload();
       };
+
+      $scope.colorCycle = function( index ) {
+        return myServices.svcColorCycle( [ "pastelA", "pastelB", "pastelC" ], index );
+      };
     }
   ]);  
+
