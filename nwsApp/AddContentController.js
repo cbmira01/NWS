@@ -1,33 +1,23 @@
 
   nwsApp.controller("AddContentController", ["$scope", "$http", "$route", "$sce", "myServices", 
     function ($scope, $http, $route) {
-      $scope.errors = [];
-      $scope.msgs = [];
 
       $scope.createAd = function() {
-        $scope.errors.splice(0, $scope.errors.length);
-        $scope.msgs.splice(0, $scope.msgs.length);
-            
-        var createJson = {
+        var json = {
           "link": $scope.adLink 
         };
-        
-        $http.post("http://localhost/nws/php/create.php?table=ads", createJson)
+        $scope.createContent("ads", json);
+      };
+
+      $scope.createContent = function(table, json) {
+        $http.post("http://localhost/nws/php/create.php?table="+table, json)
           .success(function(data, status, headers, config) {
-            if (data.msg !== "") {
-                $scope.msgs.push(data.msg);
-            } else {
-                $scope.errors.push(data.error);
-            }
           })
           .error(function(data, status) {
-            $scope.errors.push(status);
             alert("Error caught in nwsApp.js.AddContentController: " + status);
           });
 
         $route.reload();
       };
-
-// ----------------
     }
   ]);
