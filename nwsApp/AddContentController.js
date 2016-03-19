@@ -6,6 +6,7 @@
         var json = {
           "link": $scope.adLink 
         };
+
         $scope.createContent("ads", json);
       };
 
