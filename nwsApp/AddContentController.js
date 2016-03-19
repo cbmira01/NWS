@@ -12,7 +12,7 @@
           "link": $scope.adLink 
         };
         
-        $http.post("http://localhost/nws/php/createAd.php", createJson)
+        $http.post("http://localhost/nws/php/create.php?table=ads", createJson)
           .success(function(data, status, headers, config) {
             if (data.msg !== "") {
                 $scope.msgs.push(data.msg);
