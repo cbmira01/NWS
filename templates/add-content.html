@@ -51,46 +51,41 @@
       </label>
       <label>Hide image for small media only?
         <input type="checkbox" ng-model="article.hfso" ng-true-value="'T'" ng-false-value="'F'">
-      </label>
-      
+      </label>      
     </div>
     <a href="" ng-click="createArticle()" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div> 
 
-<!--   <div id="add-video" class="row">
+   <div id="add-video" class="row">
     <h4><br><br>Add a video</h4>
     <div class="column large-12">
       <label>Title
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="video.title" />
       </label>
-
       <label>Description
-        <textarea ng-model=""></textarea>
+        <textarea ng-model="video.description"></textarea>
       </label>
-
       <label>Video URL
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="video.link" />
       </label>
-
       <label>Site Selection
-        <select>
-          <option value="youtube">Youtube</option>
+        <select ng-model="video.site">
+          <option value="youtube" selected>Youtube</option>
           <option value="onsite">Onsite</option>
-          <option value="none">No Video Available</option>
+          <option value="">No Video Available</option>
         </select>
       </label>
-
       <label>Video Type
-        <select>
-          <option value="ogg">video/ogg</option>
-          <option value="notspec">Not Specified</option>
+        <select ng-model="video.type">
+          <option value="video/ogg" selected>video/ogg</option>
+          <option value="">Not Specified</option>
         </select>
       </label>
     </div>
-    <a href="" class="button tiny">Add</a>
+    <a href="" ng-click="createVideo()" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
-  </div> -->
+  </div>
 
   <div id="add-ad" class="row">
     <h4><br><br>Add an ad</h4>

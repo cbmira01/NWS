@@ -32,16 +32,16 @@
         $scope.createContent("articles", json);
       };
 
-/*       $scope.createVideo = function() {
+      $scope.createVideo = function() {
         var json = {
-          "site": $scope.site,
-          "type": $scope.type,
-          "title": $scope.title,
-          "description": $scope.description,
-          "link": $scope.link
+          "site": $scope.video.site,
+          "type": $scope.video.type,
+          "title": $scope.video.title,
+          "description": $scope.video.description,
+          "link": $scope.video.link
         };
         $scope.createContent("videos", json);
-      }; */
+      }; 
 
       $scope.createAd = function() {
         var json = {
@@ -76,7 +76,7 @@
       }; */
 
       $scope.createContent = function(table, json) {
-alert("createContent called!");
+alert("createContent called for: " + table);
         $http.post("http://localhost/nws/php/create.php?table=" + table, json)
           .success(function(data, status, headers, config) {
           })
