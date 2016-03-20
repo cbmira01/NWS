@@ -65,15 +65,15 @@
         $scope.createContent("services", json);
       }; */
 
-/*       $scope.createOfficer = function() {
+      $scope.createOfficer = function() {
         var json = {
-          "name": $scope.name,
-          "email": $scope.email,
-          "description": $scope.description,
-          "photo": $scope.photo
+          "name": $scope.officer.name,
+          "email": $scope.officer.email,
+          "description": $scope.officer.description,
+          "photo": $scope.officer.photo
         };
         $scope.createContent("officers", json);
-      }; */
+      }; 
 
       $scope.createContent = function(table, json) {
 alert("createContent called for: " + table);
