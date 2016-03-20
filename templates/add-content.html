@@ -20,19 +20,15 @@
       <label>Feature Article Title
         <textarea ng-model="featureTitle"></textarea>
       </label>
-
       <label>Feature Article Text
         <textarea ng-model="featureArticle"></textarea>
       </label>
-
       <label>Carousel Image 1 URL
         <input type="text" ng-model="featureImage1" />
       </label>
-
       <label>Carousel Image 2 URL
         <input type="text" ng-model="featureImage2" />
       </label>
-
       <label>Carousel Image 3 URL
         <input type="text" ng-model="featureImage3" />
       </label>     
@@ -41,30 +37,26 @@
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
 
-<!--   <div id="add-article" class="row">
+   <div id="add-article" class="row">
     <h4><br><br>Add an article</h4>
     <div class="column large-12">
       <label>Title
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="article.title" />
       </label>
-
       <label>Text
-        <textarea ng-model=""></textarea>
+        <textarea ng-model="article.text"></textarea>
       </label>
-
       <label>Image URL
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="article.image" />
       </label>
-
-      <label>UUID
-        <pre>         --UUID goes here--</pre>
+      <label>Hide image for small media only?
+        <input type="checkbox" ng-model="article.hfso" ng-true-value="'T'" ng-false-value="'F'">
       </label>
-
-      <input id="checkbox1" type="checkbox" ng-model=""><label for="checkbox1">Hide image for small media only?</label>     
+      
     </div>
-    <a href="" class="button tiny">Add</a>
+    <a href="" ng-click="createArticle()" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
-  </div> -->
+  </div> 
 
 <!--   <div id="add-video" class="row">
     <h4><br><br>Add a video</h4>

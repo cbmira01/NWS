@@ -21,24 +21,24 @@
       }; 
 
       $scope.createArticle = function() {
-            //   -- call getuuid function here --
+        $scope.article.uuid = generateUUID();
         var json = {
-          "uuid":,
-          "hfso":,
-          "title":,
-          "image":,
-          "text":
+          "uuid": $scope.article.uuid,
+          "hfso": $scope.article.hfso,
+          "title": $scope.article.title,
+          "image": $scope.article.image,
+          "text": $scope.article.text
         };
         $scope.createContent("articles", json);
       };
 
 /*       $scope.createVideo = function() {
         var json = {
-          "site":,
-          "type":,
-          "title":,
-          "description":,
-          "link":
+          "site": $scope.site,
+          "type": $scope.type,
+          "title": $scope.title,
+          "description": $scope.description,
+          "link": $scope.link
         };
         $scope.createContent("videos", json);
       }; */
@@ -52,30 +52,31 @@
 
 /*       $scope.createArchive = function() {
         var json = {
-          "title":,
-          "link":
+          "title": $scope.title,
+          "link": $scope.link
         };
         $scope.createContent("archives", json);
       }; */
 
 /*       $scope.createService = function() {
         var json = {
-          "text":
+          "text": $scope.text
         };
         $scope.createContent("services", json);
       }; */
 
 /*       $scope.createOfficer = function() {
         var json = {
-          "name":,
-          "email":,
-          "description":,
-          "photo":
+          "name": $scope.name,
+          "email": $scope.email,
+          "description": $scope.description,
+          "photo": $scope.photo
         };
         $scope.createContent("officers", json);
       }; */
 
       $scope.createContent = function(table, json) {
+alert("createContent called!");
         $http.post("http://localhost/nws/php/create.php?table=" + table, json)
           .success(function(data, status, headers, config) {
           })
