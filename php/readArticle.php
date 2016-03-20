@@ -4,7 +4,7 @@
 
   $uuid = $_GET["uuid"];
 
-  $sql = "SELECT title, image, text FROM articles_t WHERE uuid = :uuid";
+  $sql = "SELECT hfso, title, image, text FROM articles_t WHERE uuid = :uuid";
   $stmt = $pdo->prepare( $sql );
   $stmt->bindParam(":uuid", $uuid);  
   $stmt->execute();
