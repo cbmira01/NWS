@@ -2,17 +2,16 @@
   nwsApp.controller("DeleteContentController", ["$scope", "$http", "$location", "$routeParams", "$route", "$sce", "myServices", 
     function ($scope, $http, $location, $routeParams, $route, $sce, myServices) {
   
-      var contentTables = [
-        "feature",
-        "articles",
-        "videos",
-        "ads",
-        "archives",
-        "services",
-        "officers"
-      ];
-
       (function init() {
+        var contentTables = [
+          "feature",
+          "articles",
+          "videos",
+          "ads",
+          "archives",
+          "services",
+          "officers"
+        ];
         contentTables.forEach(function(table) {
           $http.get("http://localhost/nws/php/readAll.php?table=" + table)
             .success(function(data) {
@@ -49,14 +48,12 @@
         var json = {
           "id": id
         }; 
-
         $http.post("http://localhost/nws/php/delete.php?table=" + table, json)
           .success(function(data, status, headers, config) {
           })
           .error(function(data, status) {
             alert("Error caught in nwsApp.js.DeleteController: " + status);
           });
-
         $route.reload();
       };
 
