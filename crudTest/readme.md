@@ -2,7 +2,7 @@
 
 crudTest is a small application to study Angular, PHP and MySQL interaction.
 
-This is a Brooksian "throw-away" project to prepare for a larger web application.
+This is a "throw-away" project to prepare for a larger web application.
 
 ## Features
 - Complete test of create, read, update and delete operations in an Angular web app.
@@ -26,7 +26,7 @@ This is a Brooksian "throw-away" project to prepare for a larger web application
 - Installed WAMP/LAMP/MAMP stack.
 - Internet access for delivery of Angular framework.
 - Prepared database:
-    - Restore database backup file crudTest/notes/dump_of_crudtest_database.sql
+    - Restore database backup file "crudTest/notes/dump_of_crudtest_database.sql"
     - Create user crud_user.
-    - Extend crudtest_db schema rights SELECT, INSERT, UPDATE, DELETE, EXECUTE to crud_user.
+    - Extend crudtest_db schema rights SELECT, INSERT, UPDATE, DELETE, and EXECUTE to crud_user.
 

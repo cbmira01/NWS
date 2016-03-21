@@ -1,10 +1,7 @@
 
   nwsApp, an Angular-driven Neighborhood Web Site.
-    - demonstration for Code Louisville, Winter 2016
-    - by Calvin Miracle, Louisville KY
-
-  This application can do the following things:
-    - ...
+    - demonstration for Code Louisville, January-March 2016
+    - by Calvin Miracle, Louisville KY (cbmira01@gmail.com)
 
   This application demonstrates the following things:
     - modular Angular app construction;

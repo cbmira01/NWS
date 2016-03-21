@@ -1,0 +1,10 @@
+
+The angular-slick-carousel framework facilitates Slick Carousel under Angular.
+    https://github.com/devmark/angular-slick-carousel (DevMark of Hong Kong)
+
+
+Frameworks angular-youtube-embed and www.youtube.com/iframe_api facilitate
+handling YouTube IFrames in Angular.
+    https://github.com/brandly/angular-youtube-embed (Matthew Brandly)
+    www.youtube.com/iframe_api
+
