@@ -1,121 +1,65 @@
 
   <div id="top" class="row">
     <h4><br><br><br>Neighborhood Website: Delete Content</h4>
-      <div class="row">
-        <div class="columns small-12 medium-12 large-12 left">
-          <a href="#/delete-content/#delete-article" class="button tiny">Articles</a>              
-          <a href="#/delete-content/#delete-video" class="button tiny">Videos</a>
-          <a href="#/delete-content/#delete-ad" class="button tiny">Ads</a> 
-          <a href="#/delete-content/#delete-officer" class="button tiny">Officers</a>  
-          <a href="#/delete-content/#delete-service" class="button tiny">Services</a>
-          <a href="#/delete-content/#delete-archive" class="button tiny">Archives</a>       
-        </div>
+    <div class="row">
+      <div class="columns small-12 medium-12 large-12 left">
+        <a href="#/delete-content/#delete-article" class="button tiny">Articles</a>              
+        <a href="#/delete-content/#delete-video" class="button tiny">Videos</a>
+        <a href="#/delete-content/#delete-ad" class="button tiny">Ads</a> 
+        <a href="#/delete-content/#delete-officer" class="button tiny">Officers</a>  
+        <a href="#/delete-content/#delete-service" class="button tiny">Services</a>
+        <a href="#/delete-content/#delete-archive" class="button tiny">Archives</a>       
       </div>
+    </div>
   </div>
 
-<!--   <div id="delete-article" class="row">
-    <h4><br><br>Delete an article</h4>
-    <div
-         class="columns large-12 panel {{colorCycle($index)}}">
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-1 left">
-          <img class="smallPicture" src="https://pixabay.com/static/uploads/photo/2016/02/11/16/59/dog-1194083_960_720.jpg" alt="Article image"/>
-        </div>  
-    
-        <div class="column large-10 left">
-          <h6>1, uuid.................... TITLE</h6>
-          <h6>LIMITED TEXT LIMITED TEXT LIMITED TEXT...</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-1 left">
-          <img class="smallPicture" src="https://pixabay.com/static/uploads/photo/2016/02/11/16/59/dog-1194083_960_720.jpg" alt="Article image"/>
-        </div>  
-    
-        <div class="column large-10 left">
-          <h6>Record 2, uuid.................... TITLE</h6>
-          <h6>LIMITED TEXT LIMITED TEXT LIMITED TEXT...</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-1 left">
-          <img class="smallPicture" src="https://pixabay.com/static/uploads/photo/2016/02/11/16/59/dog-1194083_960_720.jpg" alt="Article image"/>
-        </div>  
-    
-        <div class="column large-10 left">
-          <h6>3, uuid.................... TITLE</h6>
-          <h6>LIMITED TEXT LIMITED TEXT LIMITED TEXT...</h6>
-        </div>
-      </div>
-    </div>
-    <a href="" class="button tiny">Delete</a>
-    <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div> -->
-
- <!--  <div id="delete-video" class="row">
-    <h4><br><br>Delete a video</h4>
-    <div
-         class="columns large-12 panel {{colorCycle($index)}}">
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-    
-        <div class="column large-10 left">
-          <h6>1, TITLE, LINK</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-10 left">
-          <h6>2, TITLE, LINK</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
- 
-        <div class="column large-10 left">
-          <h6>3, TITLE, LINK</h6>
-        </div>
-      </div>
-    </div>
-    <a href="" class="button tiny">Delete</a>
-    <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div> -->
-
-  <div id="delete-ad" class="row">
-    <h4><br><br>Delete an ad</h4>
-    <div ng-repeat="ad in ads"
+  <div id="delete-article" class="row">
+    <h4><br><br>Delete articles</h4>
+    <div ng-repeat="article in articles"
          class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
 
       <div class="row">
         <div class="column large-2 medium-2 small-2 left">
+          <a href="" ng-click="deleteArticle(article.id)" class="button tiny">{{article.id}}</a>
+        </div>   
+        <div class="column large-2 medium-2 small-2 left">
+          <img class="smallPicture" src="{{article.image}}" alt="Article image"/>
+        </div>  
+        <div class="column large-8 medium-8 small-8 left">
+          <h6>{{article.uuid}}</h6>
+          <h6>{{article.title}}</h6>
+          <h6>{{article.text | limitTo:60}}...</h6>
+        </div>
+      </div>
+    </div>
+    <a href="#/delete-content/#top" class="button tiny">Top</a>
+  </div>
+
+  <div id="delete-video" class="row">
+    <h4><br><br>Delete videos</h4>
+    <div ng-repeat="video in videos"
+         class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
+      <div class="row">
+        <div class="column large-2 medium-2 small-2 left">
+          <a href="" ng-click="deleteVideo(video.id)" class="button tiny">{{video.id}}</a>
+        </div>   
+        <div class="column large-10 medium-10 small-10 left">
+          <h6>{{video.title}}</h6>
+          <h6>{{video.link}}</h6>
+        </div>
+      </div>
+    </div>
+    <a href="#/delete-content/#top" class="button tiny">Top</a>
+  </div>
+
+  <div id="delete-ad" class="row">
+    <h4><br><br>Delete ads</h4>
+    <div ng-repeat="ad in ads"
+         class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
+      <div class="row">
+        <div class="column large-2 medium-2 small-2 left">
           <a href="" ng-click="deleteAd(ad.id)" class="button tiny">{{ad.id}}</a>
         </div>  
-
         <div class="column large-2 medium-2 small-2 left">
           <img class="smallPicture" src="{{ad.link}}" alt="Ad image"/>
         </div>
@@ -125,19 +69,16 @@
   </div>
 
   <div id="delete-officer" class="row">
-    <h4><br><br>Delete an officer or board member</h4>
+    <h4><br><br>Delete officers and board members</h4>
     <div ng-repeat="officer in officers"
          class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
-
       <div class="row">
         <div class="column large-2 medium-2 small-2 left">
           <a href="" ng-click="deleteOfficer(officer.id)" class="button tiny">{{officer.id}}</a>
         </div>  
-
         <div class="column large-2 medium-2 small-2 left">
           <img class="smallPicture" src="{{officer.photo}}" alt="Article image"/>
         </div>  
-    
         <div class="column large-8 medium-8 small-8 left">
           <h6>{{officer.name}}</h6>
           <h6>{{officer.description}}</h6>
@@ -148,15 +89,13 @@
   </div>
 
   <div id="delete-service" class="row">
-    <h4><br><br>Delete a service phone number</h4>
+    <h4><br><br>Delete service phone numbers</h4>
     <div ng-repeat="service in services"
          class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
-
       <div class="row">
         <div class="column large-2 medium-2 small-2 left">
           <a href="" ng-click="deleteService(service.id)" class="button tiny">{{service.id}}</a>
         </div>   
-    
         <div class="column large-10 medium-10 small-10 left">
           <h6>{{service.text}}</h6>
         </div>
@@ -166,15 +105,13 @@
   </div>
 
   <div id="delete-archive" class="row">
-    <h4><br><br>Delete an archive item</h4>
+    <h4><br><br>Delete archive items</h4>
     <div ng-repeat="archive in archives"
          class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
-
       <div class="row">
         <div class="column large-2 medium-2 small-2 left">
           <a href="" ng-click="deleteArchive(archive.id)" class="button tiny">{{archive.id}}</a>
-        </div>   
-    
+        </div>    
         <div class="column large-10 medium-10 small-10 left">
           <h6>{{archive.title}}</h6>
           <h6>{{archive.link}}</h6>
