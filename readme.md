@@ -8,7 +8,7 @@ This project demonstrates an Angular-powered website using back-end
 ## Features
 - Feature article with image fader
 - Additional main-page articles with images
-- Links to onsite or YouTube videos
+- Links to on-site or YouTube videos
 - Provision for advertising content
 - Flattering display of neighborhood association board members
 - List of useful neighborhood phone numbers

@@ -4,10 +4,10 @@
     - by Calvin Miracle, Louisville KY (cbmira01@gmail.com)
 
   This application demonstrates the following things:
-    - modular Angular app construction;
-    - communication with PHP backend for data persistence;
-    - color cycling on Foundation panels;
-    - successful application of Foundation attributes after Angular DOM construction.
+    - modular Angular app construction
+    - communication with PHP backend for data persistence
+    - color cycling on Foundation panels
+    - successful application of Foundation attributes after Angular DOM construction
 
   Thanks to...
       K. Scott Allen for an excellent Angular tutorial.
@@ -30,4 +30,6 @@
           https://github.com/devmark/angular-slick-carousel
       Joseph Oster for Angular controller initialization
           http://stackoverflow.com/questions/16150289/running-angularjs-initialization-code-when-view-is-loaded
+      Matthew Brandly for angular-youtube-embed
+          https://github.com/brandly/angular-youtube-embed
 
