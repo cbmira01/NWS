@@ -5,18 +5,19 @@
       $scope.updateFeature = function() {
         var json = {
           "id": 1,
-          "title": $scope.featureTitle, 
-          "article": $scope.featureArticle,
-          "image1": $scope.featureImage1,
-          "image2": $scope.featureImage2,
-          "image3": $scope.featureImage3
+          "title": $scope.feature.title, 
+          "article": $scope.feature.article,
+          "image1": $scope.feature.image1,
+          "image2": $scope.feature.image2,
+          "image3": $scope.feature.image3
         };
         $http.post("http://localhost/nws/php/updateFeature.php", json)
           .success(function(data, status, headers, config) {
-        })
+          })
           .error(function(data, status) {
             alert("Error caught in nwsApp.js.AddContentController: " + status);
-        }); 
+          }); 
+        $route.reload();
       }; 
 
       $scope.createArticle = function() {
@@ -81,7 +82,6 @@
           .error(function(data, status) {
             alert("Error caught in nwsApp.js.AddContentController: " + status);
           });
-
         $route.reload();
       };
     }

@@ -18,19 +18,19 @@
     <h4><br><br>Update feature article and images</h4>
     <div class="columns small-12 medium-12 large-12 left">
       <label>Feature Article Title
-        <textarea ng-model="featureTitle"></textarea>
+        <textarea ng-model="feature.title"></textarea>
       </label>
       <label>Feature Article Text
-        <textarea ng-model="featureArticle"></textarea>
+        <textarea ng-model="feature.article"></textarea>
       </label>
       <label>Carousel Image 1 URL
-        <input type="text" ng-model="featureImage1" />
+        <input type="text" ng-model="feature.image1" />
       </label>
       <label>Carousel Image 2 URL
-        <input type="text" ng-model="featureImage2" />
+        <input type="text" ng-model="feature.image2" />
       </label>
       <label>Carousel Image 3 URL
-        <input type="text" ng-model="featureImage3" />
+        <input type="text" ng-model="feature.image3" />
       </label>     
     </div>
     <a href="" ng-click="updateFeature()" class="button tiny">Update</a>
