@@ -11,7 +11,6 @@
           "image2": $scope.featureImage2,
           "image3": $scope.featureImage3
         };
-
         $http.post("http://localhost/nws/php/updateFeature.php", json)
           .success(function(data, status, headers, config) {
         })
@@ -50,20 +49,20 @@
         $scope.createContent("ads", json);
       };
 
-/*       $scope.createArchive = function() {
+      $scope.createArchive = function() {
         var json = {
-          "title": $scope.title,
-          "link": $scope.link
+          "title": $scope.archive.title,
+          "link": $scope.archive.link
         };
         $scope.createContent("archives", json);
-      }; */
+      }; 
 
-/*       $scope.createService = function() {
+      $scope.createService = function() {
         var json = {
-          "text": $scope.text
+          "text": $scope.service.text
         };
         $scope.createContent("services", json);
-      }; */
+      }; 
 
       $scope.createOfficer = function() {
         var json = {
@@ -76,7 +75,6 @@
       }; 
 
       $scope.createContent = function(table, json) {
-alert("createContent called for: " + table);
         $http.post("http://localhost/nws/php/create.php?table=" + table, json)
           .success(function(data, status, headers, config) {
           })

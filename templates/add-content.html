@@ -1,22 +1,22 @@
 
   <div id="top" class="row">
     <h4><br><br><br>Neighborhood Website: Add Content</h4>
-      <div class="row">
-        <div class="columns small-12 medium-12 large-12 left">
-          <a href="#/add-content/#update-feature" class="button tiny">Feature</a>
-          <a href="#/add-content/#add-article" class="button tiny">Articles</a>              
-          <a href="#/add-content/#add-video" class="button tiny">Videos</a>
-          <a href="#/add-content/#add-ad" class="button tiny">Ads</a> 
-          <a href="#/add-content/#add-officer" class="button tiny">Officers</a>  
-          <a href="#/add-content/#add-service" class="button tiny">Services</a>
-          <a href="#/add-content/#add-archive" class="button tiny">Archives</a>       
-        </div>
+    <div class="row">
+      <div class="columns small-12 medium-12 large-12 left">
+        <a href="#/add-content/#update-feature" class="button tiny">Feature</a>
+        <a href="#/add-content/#add-article" class="button tiny">Articles</a>              
+        <a href="#/add-content/#add-video" class="button tiny">Videos</a>
+        <a href="#/add-content/#add-ad" class="button tiny">Ads</a> 
+        <a href="#/add-content/#add-officer" class="button tiny">Officers</a>  
+        <a href="#/add-content/#add-service" class="button tiny">Services</a>
+        <a href="#/add-content/#add-archive" class="button tiny">Archives</a>       
       </div>
+    </div>
   </div>
 
   <div id="update-feature" class="row">
     <h4><br><br>Update feature article and images</h4>
-    <div class="column large-12">
+    <div class="columns small-12 medium-12 large-12 left">
       <label>Feature Article Title
         <textarea ng-model="featureTitle"></textarea>
       </label>
@@ -39,7 +39,7 @@
 
   <div id="add-article" class="row">
     <h4><br><br>Add an article</h4>
-    <div class="column large-12">
+    <div class="ccolumns small-12 medium-12 large-12 left">
       <label>Title
         <input type="text" ng-model="article.title" />
       </label>
@@ -59,7 +59,7 @@
 
   <div id="add-video" class="row">
     <h4><br><br>Add a video</h4>
-    <div class="column large-12">
+    <div class="columns small-12 medium-12 large-12 left">
       <label>Title
         <input type="text" ng-model="video.title" />
       </label>
@@ -89,7 +89,7 @@
 
   <div id="add-ad" class="row">
     <h4><br><br>Add an ad</h4>
-    <div class="column large-12 medium-12 small-12">
+    <div class="columns small-12 medium-12 large-12 left">
       <label>Ad URL
         <input type="text" ng-model="adLink" />
       </label>
@@ -100,7 +100,7 @@
 
   <div id="add-officer" class="row">
     <h4><br><br>Add an officer or board member</h4>
-    <div class="column large-12">
+    <div class="columns small-12 medium-12 large-12 left">
       <label>Name
         <input type="text" ng-model="officer.name" />
       </label>
@@ -116,31 +116,29 @@
     </div>
     <a href="" ng-click="createOfficer()" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
-  </div> -->
+  </div>
 
-<!--   <div id="add-service" class="row">
+  <div id="add-service" class="row">
     <h4><br><br>Add a service phone number</h4>
-    <div class="column large-12">
+    <div class="columns small-12 medium-12 large-12 left">
       <label>Text
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="service.text" />
       </label>
     </div>
-    <a href="" class="button tiny">Add</a>
-    <a href="#/add-content/#top" class="button tiny">Top</a>
-  </div> -->
-
-<!--   <div id="add-archive" class="row">
-    <h4><br><br>Add an archive item</h4>
-    <div class="column large-12">
-      <label>Title
-        <input type="text" ng-model="" />
-      </label>
-
-      <label>Item URL
-        <input type="text" ng-model="" />
-      </label>
-    </div>
-    <a href="" class="button tiny">Add</a>
+    <a href="" ng-click="createService()" class="button tiny">Add</a>
     <a href="#/add-content/#top" class="button tiny">Top</a>
   </div>
- -->
+
+  <div id="add-archive" class="row">
+    <h4><br><br>Add an archive item</h4>
+    <div class="columns small-12 medium-12 large-12 left2">
+      <label>Title
+        <input type="text" ng-model="archive.title" />
+      </label>
+      <label>Item URL
+        <input type="text" ng-model="archive.link" />
+      </label>
+    </div>
+    <a href="" ng-click="createArchive()"class="button tiny">Add</a>
+    <a href="#/add-content/#top" class="button tiny">Top</a>
+  </div>
