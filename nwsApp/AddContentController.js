@@ -1,4 +1,6 @@
 
+  "use strict";
+
   nwsApp.controller("AddContentController", ["$scope", "$http", "$route", "$sce", "myServices", 
     function ($scope, $http, $route, $sce, myServices) {
 

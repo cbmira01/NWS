@@ -54,7 +54,6 @@
         exit;
   }
 
-
   $success = $stmt->execute();
 
   if ($success) {
@@ -62,7 +61,6 @@
   } else {
       $json = json_encode(array("msg" => "", "error" => "Error inserting record."));
   }
-  
   print_r($json);
   
 ?>

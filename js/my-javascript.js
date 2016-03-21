@@ -1,4 +1,6 @@
 
+  "use strict";
+
   //  Foundation reactive features for small media.
   $(window).on("load resize", function(e) {
     var isSmallMedia = Foundation.utils.is_small_only();
