@@ -140,6 +140,7 @@
     
         <div class="column large-8 medium-8 small-8 left">
           <h6>{{officer.name}}</h6>
+          <h6>{{officer.description}}</h6>
         </div>
       </div>
     </div>
@@ -164,41 +165,21 @@
     <a href="#/delete-content/#top" class="button tiny">Top</a>
   </div>
 
-<!--   <div id="delete-archive" class="row">
+  <div id="delete-archive" class="row">
     <h4><br><br>Delete an archive item</h4>
-    <div
-         class="columns large-12 panel {{colorCycle($index)}}">
+    <div ng-repeat="archive in archives"
+         class="columns large-12 medium-12 small-12 panel {{colorCycle($index)}}">
 
       <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
+        <div class="column large-2 medium-2 small-2 left">
+          <a href="" ng-click="deleteArchive(archive.id)" class="button tiny">{{archive.id}}</a>
+        </div>   
     
-        <div class="column large-10 left">
-          <h6>1, TITLE, LINK</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
-
-        <div class="column large-10 left">
-          <h6>2, TITLE, LINK</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column large-1 left">
-          <input type="radio" name="articleRecords" ng-click="markThisArticle(article.id)" ng-model="markedForDelete">
-        </div>  
- 
-        <div class="column large-10 left">
-          <h6>3, TITLE, LINK</h6>
+        <div class="column large-10 medium-10 small-10 left">
+          <h6>{{archive.title}}</h6>
+          <h6>{{archive.link}}</h6>
         </div>
       </div>
     </div>
-    <a href="" class="button tiny">Delete</a>
     <a href="#/delete-content/#top" class="button tiny">Top</a>
-  </div> -->
+  </div>
