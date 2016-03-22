@@ -49,7 +49,7 @@
         $stmt->bindParam(":text", $data->text); 
         break;
     default:
-        $json = json_encode(array("msg" => "", "error" => "No usable table name, in create.php."));
+        $json = json_encode(array("msg" => "", "error" => "No usable table name '" . $_GET["table"] . "' in create.php."));
         print_r($json);
         exit;
   }

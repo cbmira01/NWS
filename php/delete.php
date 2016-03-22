@@ -25,7 +25,7 @@
         $sql = "DELETE FROM services_t WHERE id = :id";
         break;
     default:
-        $json = json_encode(array("msg" => "", "error" => "No usable table name, in delete.php."));
+        $json = json_encode(array("msg" => "", "error" => "No usable table name '" . $_GET["table"] . "' in delete.php."));
         print_r($json);
         exit;
   }

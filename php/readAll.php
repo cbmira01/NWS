@@ -26,7 +26,7 @@
         $sql = "SELECT id, text FROM services_t";
         break;
     default:
-        $json = json_encode(array("msg" => "", "error" => "No usable table name, in readAll.php."));
+        $json = json_encode(array("msg" => "", "error" => "No usable table name '" . $_GET["table"] . "' in readAll.php."));
         print_r($json);
         exit;
   }
