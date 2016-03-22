@@ -19,8 +19,12 @@
         });
       })();
 
-      $scope.colorCycle = function( index ) {
-        return myServices.svcColorCycle( [ "pastelA", "pastelB", "pastelC", "pastelB", "pastelC" ], index );
+      $scope.greenCycle = function( index ) {
+        return myServices.svcColorCycle( [ "greenA", "greenB", "greenC", "greenB", "greenC" ], index );
+      };
+
+      $scope.purpleCycle = function( index ) {
+        return myServices.svcColorCycle( [ "purpleA", "purpleB", "purpleC", "purpleB", "purpleC" ], index );
       };
     }
   ]);
