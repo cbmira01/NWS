@@ -6,12 +6,10 @@
       <div ng-repeat="officer in officers" 
            class="columns small-12 medium-6 large-6 panel left {{colorCycle($index)}}"
            data-equalizer-watch>
-
         <div class="row">
           <div class="column large-4 left">
             <img class="officerPicture" src="{{officer.photo}}" alt="Officer photo."/>
           </div>  
-      
           <div class="column large-6 left">
             <p>{{officer.name}}</p>
             <p>{{officer.description}}</p>
