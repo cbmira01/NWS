@@ -5,11 +5,7 @@
     function ($scope, $http, $route, $sce, $anchorScroll, myServices) {
 
       $scope.gotoAnchor = function( anchorLocation ) {
-        if ($location.hash() !== anchorLocation) {
-          $location.hash(anchorLocation);
-        } else {
-          $anchorScroll();
-        }
+        $anchorScroll( anchorLocation );
       };
 
       $scope.updateFeature = function() {
