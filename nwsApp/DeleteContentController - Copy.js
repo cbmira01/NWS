@@ -1,13 +1,9 @@
 
   "use strict";
 
-  nwsApp.controller("DeleteContentController", ["$scope", "$http", "$location", "$routeParams", "$route", "$sce", "$anchorScroll", "myServices", 
-    function ($scope, $http, $location, $routeParams, $route, $sce, $anchorScroll, myServices) {
+  nwsApp.controller("DeleteContentController", ["$scope", "$http", "$location", "$routeParams", "$route", "$sce", "myServices", 
+    function ($scope, $http, $location, $routeParams, $route, $sce, myServices) {
   
-      $scope.gotoAnchor = function( anchorLocation ) {
-        $anchorScroll( anchorLocation );
-      };
-
       (function init() {
         var contentTables = [
           "feature",

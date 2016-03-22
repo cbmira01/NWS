@@ -52,4 +52,3 @@
 
   // Initialize Zurb Foundation.
   $(document).foundation();
-

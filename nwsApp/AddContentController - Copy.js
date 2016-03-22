@@ -1,16 +1,8 @@
 
   "use strict";
 
-  nwsApp.controller("AddContentController", ["$scope", "$http", "$route", "$sce", "$anchorScroll", "myServices", 
-    function ($scope, $http, $route, $sce, $anchorScroll, myServices) {
-
-      $scope.gotoAnchor = function( anchorLocation ) {
-        if ($location.hash() !== anchorLocation) {
-          $location.hash(anchorLocation);
-        } else {
-          $anchorScroll();
-        }
-      };
+  nwsApp.controller("AddContentController", ["$scope", "$http", "$route", "$sce", "myServices", 
+    function ($scope, $http, $route, $sce, myServices) {
 
       $scope.updateFeature = function() {
         var json = {
