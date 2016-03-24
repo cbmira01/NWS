@@ -13,7 +13,7 @@ This project demonstrates an Angular-powered website using back-end
 - Flattering display of neighborhood association board members
 - List of useful neighborhood phone numbers
 - List of linked archival newsletters
-- Panel-based styling feaures color cycling
+- Panel-based styling features color cycling
 - Responsive design for large, medium and small media
 - Article images can be optionally hidden on small media
 - Top-bar adapts to small media
