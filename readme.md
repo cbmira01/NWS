@@ -1,8 +1,7 @@
-## Synopsis
 
-Neighborhood Web Site
+# Neighborhood Web Site
 
-This project demonstrates an Angular-powered website using back-end 
+This project demonstrates an Angular-powered website using back-end
   interaction with MySQL scripted in PHP.
 
 ## Features
@@ -31,7 +30,7 @@ This project demonstrates an Angular-powered website using back-end
 - Small and simple initial test database
 - PDO invocations with literal preparations throughout
 
-## Preconditions for demonstration
+## To see it in action...
 - Installed WAMP/LAMP/MAMP stack
 - Internet access for framework and content delivery
 - Prepared database:
