@@ -31,12 +31,12 @@ This project demonstrates an Angular-powered website using back-end
 - PDO invocations with literal preparations throughout
 
 ## To see it in action...
-- Installed WAMP/LAMP/MAMP stack
-- Internet access for framework and content delivery
-- Prepared database:
+- Install WAMP/LAMP/MAMP stack
+- Use Internet access for framework and content delivery
+- Prepare the database:
     - Restore database backup file "nws/project_notes/NWS_database_export.sql"
     - Create user nws_user
     - Extend nws_db schema rights SELECT, INSERT, UPDATE, DELETE, and EXECUTE to nws_user
-
+ 
 ## Extra
 Check out NWS/crudTest for a simple MySQL-backed web application in Angular and PHP.
