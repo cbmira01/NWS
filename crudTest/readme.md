@@ -23,7 +23,7 @@ This is a "throw-away" project to prepare for a larger web application.
 - Should be portable to other platforms and PDO-supported database servers.
 
 ## To see it in action...
-- Installe WAMP/LAMP/MAMP stack.
+- Install WAMP/LAMP/MAMP stack.
 - Use Internet access for delivery of Angular framework.
 - Prepare the database:
     - Restore database backup file "crudTest/notes/dump_of_crudtest_database.sql"
