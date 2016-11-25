@@ -1,12 +1,12 @@
-## Synopsis
+# CRUD Test
 
-crudTest is a small application to study Angular, PHP and MySQL interaction.
+CRUD Test is a small application to study Angular, PHP and MySQL interaction.
 
 This is a "throw-away" project to prepare for a larger web application.
 
 ## Features
 - Complete test of create, read, update and delete operations in an Angular web app.
-- Totally stripped out, minimal in all ways: 
+- Totally stripped out, minimal in all ways:
     - no styling frameworks (eg Foundation or Bootstrap);
     - no jQuery;
     - no PHP frameworks;
@@ -22,10 +22,10 @@ This is a "throw-away" project to prepare for a larger web application.
     - PHP 5.5.12
 - Should be portable to other platforms and PDO-supported database servers.
 
-## Preconditions for demonstration
-- Installed WAMP/LAMP/MAMP stack.
-- Internet access for delivery of Angular framework.
-- Prepared database:
+## To see it in action...
+- Installe WAMP/LAMP/MAMP stack.
+- Use Internet access for delivery of Angular framework.
+- Prepare the database:
     - Restore database backup file "crudTest/notes/dump_of_crudtest_database.sql"
     - Create user crud_user.
     - Extend crudtest_db schema rights SELECT, INSERT, UPDATE, DELETE, and EXECUTE to crud_user.
