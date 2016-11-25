@@ -22,7 +22,7 @@ This is a "throw-away" project to prepare for a larger web application.
     - PHP 5.5.12
 - Should be portable to other platforms and PDO-supported database servers.
 
-## To see it in action...
+## To see it in action..
 - Install WAMP/LAMP/MAMP stack.
 - Use Internet access for delivery of Angular framework.
 - Prepare the database:

@@ -30,7 +30,7 @@ This project demonstrates an Angular-powered website using back-end
 - Small and simple initial test database
 - PDO invocations with literal preparations throughout
 
-## To see it in action...
+## To see it in action..
 - Install WAMP/LAMP/MAMP stack
 - Use Internet access for framework and content delivery
 - Prepare the database:
