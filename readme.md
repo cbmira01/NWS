@@ -2,7 +2,7 @@
 # Neighborhood Web Site
 
 This project demonstrates an Angular-powered website using back-end
-  interaction with MySQL scripted in PHP.
+  interaction with MySQL scripted in PHP
 
 ## Features
 - Feature article with image fader
@@ -32,11 +32,13 @@ This project demonstrates an Angular-powered website using back-end
 
 ## To see it in action..
 - Install WAMP/LAMP/MAMP stack
-- Use Internet access for framework and content delivery
+- Internet access needed for framework and content delivery
+- Unpack this project in a preferred folder
+- You may want to create a symlink to your preferred folder in Apache's docroot folder
 - Prepare the database:
     - Restore database backup file "nws/project_notes/NWS_database_export.sql"
     - Create user nws_user
     - Extend nws_db schema rights SELECT, INSERT, UPDATE, DELETE, and EXECUTE to nws_user
 
 ## Extra
-Check out NWS/crudTest for a simple MySQL-backed web application in Angular and PHP.
+Check out NWS/crudTest for a simple MySQL-backed web application in Angular and PHP
