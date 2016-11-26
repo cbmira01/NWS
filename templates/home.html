@@ -3,7 +3,7 @@
 
     <!-- Feature Article Panels -->
     <div class="row" data-equalizer="eq-feature">
-      <div class="columns small-12 medium-6 large-6 featureColorImage panel" 
+      <div class="columns small-12 medium-6 large-6 featureColorImage panel"
            data-equalizer-watch="eq-feature">
         <slick class="slider featureCarousel" dots=true infinite=true fade=true autoplay=true speed=3000>
           <div class="image">
@@ -17,7 +17,7 @@
           </div>
         </slick>
       </div>
-      <div class="columns small-12 medium-6 large-6 featureColorText panel" 
+      <div class="columns small-12 medium-6 large-6 featureColorText panel"
            data-equalizer-watch="eq-feature">
         <h4>{{feature[0].title}}</h4>
         <p style="white-space:pre-wrap;">{{feature[0].article}}</p>
@@ -26,8 +26,8 @@
 
     <!-- In-line Article Panels -->
     <div class="row" data-equalizer="eq-inline">
-      <h6>Articles...<h6>
-      <div ng-repeat="article in articles" 
+      <h6>Articles...</h6>
+      <div ng-repeat="article in articles"
            class="columns small-12 medium-6 large-4 panel left {{greenCycle($index)}}"
            data-equalizer-watch="eq-inline">
         <div ng-switch="article.hfso">
@@ -46,10 +46,10 @@
 
     <!-- Video Panels -->
     <div class="row" data-equalizer="eq-videos">
-      <h6>Videos...<h6>
-      <div ng-repeat="video in videos" 
-           ng-switch="video.site" 
-           class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}" 
+      <h6>Videos...</h6>
+      <div ng-repeat="video in videos"
+           ng-switch="video.site"
+           class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
            data-equalizer-watch="eq-videos">
         <div ng-switch-when="onsite">
           <video controls>
@@ -74,9 +74,9 @@
 
     <!-- Advertising Panels -->
     <div class="row" data-equalizer="eq-ads">
-      <h6>Ads...<h6>
-      <div ng-repeat="ad in ads" 
-           class="columns small-12 medium-6 large-4 panel left" 
+      <h6>Ads...</h6>
+      <div ng-repeat="ad in ads"
+           class="columns small-12 medium-6 large-4 panel left"
            data-equalizer-watch="eq-ads">
         <img class="adGraphics" src="{{ad.link}}" alt="Advertising"/>
       </div>
