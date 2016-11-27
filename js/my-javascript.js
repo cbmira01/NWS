@@ -6,7 +6,7 @@
     var isSmallMedia = Foundation.utils.is_small_only();
     var dpnaElement = document.getElementById("dpnaText");
     if (dpnaElement === null) { return }
-    
+
     if ( isSmallMedia ) {
       dpnaElement.innerHTML = "DPNA";
       $(document).foundation({
@@ -19,23 +19,20 @@
       });
     }
   });  //end on-resize
-  
+
 
   // Configuration for Slick is in the <slick> tab of templates/home.html.
-  /*
-  // Configuration for Slick Carousel. 
-  $(document).ready(function(){
-    $('.featureCarousel').slick({
-      accessibility: true,
-      dots: false,
-      infinite: true,
-      autoplay: true,
-      autoplayspeed: 3000,
-      fade: true,
-      cssEase: 'linear'
-    });
-  }); 
-  */ 
+    //  $(document).ready(function(){
+    //    $('.featureCarousel').slick({
+    //      accessibility: true,
+    //      dots: false,
+    //      infinite: true,
+    //      autoplay: true,
+    //      autoplayspeed: 3000,
+    //      fade: true,
+    //      cssEase: 'linear'
+    //    });
+    //  });
 
 
   // UUID generator, thanks to http://jsfiddle.net/briguy37/2mvfd/
@@ -48,7 +45,7 @@
     });
     return uuid;
   };
- 
+
 
   // Initialize Zurb Foundation.
   $(document).foundation();
