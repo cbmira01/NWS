@@ -52,9 +52,9 @@
            class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
            data-equalizer-watch="eq-videos">
         <div ng-switch-when="onsite">
-          <video controls>
+        <video width="300" height="220" controls>
             <source src="{{video.link}}" type="{{video.type}}">
-          </video>
+        </video>
           <h5>{{video.title}}</h5>
           <p>{{video.description}}</p>
         </div>
