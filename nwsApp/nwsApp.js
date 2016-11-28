@@ -5,7 +5,7 @@
 
   nwsApp.config(function($sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
-      "self", 
-      "https://www.youtube.com/"
+      "self",
+      "https://www.youtube.com/**"
     ]);
   });

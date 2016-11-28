@@ -47,22 +47,32 @@
     <!-- Video Panels -->
     <div class="row" data-equalizer="eq-videos">
       <h6>Videos...</h6>
-      <div ng-repeat="video in videos"
+      <div ng-repeat="video in videos track by $index"
            ng-switch="video.site"
            class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
            data-equalizer-watch="eq-videos">
-        <div ng-switch-when="onsite">
-        <video width="300" height="220" controls>
-            <source src="{{video.link}}" type="{{video.type}}">
-        </video>
+
+          <div ng-switch-when="onsite">
+            <video width="300" height="220" controls>
+                <source src="{{video.link}}" type="{{video.type}}">
+            </video>
           <h5>{{video.title}}</h5>
           <p>{{video.description}}</p>
         </div>
+
         <div ng-switch-when="youtube">
-          <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>
+
+            <iframe ng-src="{{video.link}}" frameborder="0" allowfullscreen></iframe>
+
+
+<!--          <embed width="300" height="220" ng-src="{{video.link}}">-->
+
+<!--          <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>-->
+
           <h5>{{video.title}}</h5>
           <p>{{video.description}}</p>
         </div>
+
         <!-- No video available -->
         <div ng-switch-default>
           <img ng-src="{{video.link}}" alt="{{video.title}}"/>
@@ -75,7 +85,7 @@
     <!-- Advertising Panels -->
     <div class="row" data-equalizer="eq-ads">
       <h6>Ads...</h6>
-      <div ng-repeat="ad in ads"
+      <div ng-repeat="ad in ads track by $index"
            class="columns small-12 medium-6 large-4 panel left"
            data-equalizer-watch="eq-ads">
         <img class="adGraphics" ng-src="{{ad.link}}" alt="Advertising"/>
