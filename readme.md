@@ -39,8 +39,8 @@ This project demonstrates an Angular-powered website using back-end
 - You may need to create an NWS symlink in Apache's docroot folder
 - Prepare the database:
     - Restore database backup file "nws/project_notes/NWS_database_export.sql"
-    - Create user nws_user
-    - Extend nws_db schema rights SELECT, INSERT, UPDATE, DELETE, and EXECUTE to nws_user
+    - Create nws_user@localhost, password "password" 
+    - Extend nws_db privileges to nws_user: SELECT, INSERT, UPDATE, DELETE, and EXECUTE
 - Browse to "localhost/nws"
 - Disable ad blocking for localhost
 
