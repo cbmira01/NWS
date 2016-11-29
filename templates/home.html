@@ -61,14 +61,7 @@
         </div>
 
         <div ng-switch-when="youtube">
-
-            <iframe ng-src="{{video.link}}" frameborder="0" allowfullscreen></iframe>
-
-
-<!--          <embed width="300" height="220" ng-src="{{video.link}}">-->
-
-<!--          <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>-->
-
+          <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>
           <h5>{{video.title}}</h5>
           <p>{{video.description}}</p>
         </div>
