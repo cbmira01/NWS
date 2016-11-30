@@ -2,10 +2,11 @@
   <div id="top" class="bumpPastTopbar" my-reflow-panels>
 
     <div class="row" data-equalizer>
+        
       <div ng-switch="article[0].hfso">
         <div ng-switch-when="T">
-          <div class="columns small-12 medium-6 large-6 greenA panel left" data-equalizer-watch>
-            <img class="hide-for-small-only" src="{{article[0].image}}" alt="Article image"/>
+          <div class="columns small-12 medium-6 large-6 greenA panel left hide-for-small-only" data-equalizer-watch>
+            <img src="{{article[0].image}}" alt="Article image"/>
           </div>
         </div>
         <div ng-switch-default>
