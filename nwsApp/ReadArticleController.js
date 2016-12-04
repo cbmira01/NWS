@@ -9,12 +9,8 @@
           $scope.article = data;
 
           // If no database query result, then no page to display
-          $scope.pageNotFound = false;
-          if (typeof $scope.article[0] == 'undefined') {
-              $scope.pageNotFound = true;
-
-              console.log('Page not found...');
-
+          if (typeof $scope.article[0] === "undefined") {
+              $location.path("/article-not-found");
           }
         });
     }
