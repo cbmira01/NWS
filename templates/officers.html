@@ -3,13 +3,13 @@
     <h4>Deer Park Neighborhood Association Officers</h4>
 
     <div class="row" data-equalizer>
-      <div ng-repeat="officer in officers" 
+      <div ng-repeat="officer in officers"
            class="columns large-6 medium-6 small-12 panel left {{colorCycle($index)}}"
            data-equalizer-watch>
         <div class="row">
           <div class="column large-4 medium-4 small-4 left">
-            <img class="officerPicture" src="{{officer.photo}}" alt="Officer photo"/>
-          </div>  
+            <img class="officerPicture" ng-src="{{officer.photo}}" alt="Officer photo"/>
+          </div>
           <div class="column large-8 medium-8 small-8 left">
             <p>{{officer.name}}</p>
             <p>{{officer.description}}</p>
