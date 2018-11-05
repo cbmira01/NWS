@@ -1,7 +1,7 @@
 
   nwsApp.controller("OfficersController", ["$scope", "$http", "$sce", "myServices", 
     function($scope, $http, $sce, myServices) {
-      $http.get("http://localhost/nws/php/readAll.php?table=officers")
+      $http.get(`http://${hostname}/nws/php/readAll.php?table=officers`)
         .success(function(data) {
           $scope.officers = data;
         });

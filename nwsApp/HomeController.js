@@ -10,7 +10,7 @@
           "ads"
         ];
         contentTables.forEach(function(table) {
-          $http.get("http://localhost/nws/php/readAll.php?table=" + table)
+          $http.get(`http://${hostname}/nws/php/readAll.php?table=${table}`)
             .success(function(data) {
               $scope[table] = data;
             });

@@ -15,7 +15,7 @@
           "image2": $scope.feature.image2,
           "image3": $scope.feature.image3
         };
-        $http.post("http://localhost/nws/php/updateFeature.php", json)
+        $http.post(`http://${hostname}/nws/php/updateFeature.php`, json)
           .success(function(data, status, headers, config) {
           })
           .error(function(data, status) {
@@ -80,7 +80,7 @@
       }; 
 
       $scope.createContent = function(table, json) {
-        $http.post("http://localhost/nws/php/create.php?table=" + table, json)
+        $http.post(`http://${hostname}/nws/php/create.php?table=${table}`, json)
           .success(function(data, status, headers, config) {
           })
           .error(function(data, status) {

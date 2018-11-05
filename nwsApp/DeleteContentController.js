@@ -17,7 +17,7 @@
           "officers"
         ];
         contentTables.forEach(function(table) {
-          $http.get("http://localhost/nws/php/readAll.php?table=" + table)
+          $http.get(`http://${hostname}/nws/php/readAll.php?table=${table}`)
             .success(function(data) {
               $scope[table] = data;
             });
@@ -52,7 +52,7 @@
         var json = {
           "id": id
         }; 
-        $http.post("http://localhost/nws/php/delete.php?table=" + table, json)
+        $http.post(`http://${hostname}/nws/php/delete.php?table=${table}`, json)
           .success(function(data, status, headers, config) {
           })
           .error(function(data, status) {
