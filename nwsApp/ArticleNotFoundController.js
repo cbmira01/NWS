@@ -1,6 +1,4 @@
 
-  "use strict";
-
   nwsApp.controller("ArticleNotFoundController", function($scope) {
        $scope.image = "img/no_cat.jpg";
        $scope.title = "Article not found";

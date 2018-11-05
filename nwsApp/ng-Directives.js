@@ -1,6 +1,4 @@
  
-  "use strict";
-
   // Directive to handle reflow rendering of Foundation panels.
   nwsApp.directive("myReflowPanels", function($timeout) {
     return {

@@ -1,6 +1,4 @@
 
-  "use strict";
-
   nwsApp.controller("DeleteContentController", ["$scope", "$http", "$location", "$routeParams", "$route", "$sce", "$anchorScroll", "myServices", 
     function ($scope, $http, $location, $routeParams, $route, $sce, $anchorScroll, myServices) {
   

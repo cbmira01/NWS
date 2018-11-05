@@ -1,6 +1,4 @@
 
-  "use strict";
-
   nwsApp.controller("HomeController", ["$scope", "$http", "$sce", "myServices", 
     function($scope, $http, $sce, myServices) {
 

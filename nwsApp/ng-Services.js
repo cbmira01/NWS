@@ -1,6 +1,4 @@
 
-  "use strict";
-
   // myServices factory provides support functions for all controllers.
   nwsApp.factory("myServices", function() {
     return {

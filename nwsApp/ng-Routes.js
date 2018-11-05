@@ -1,6 +1,4 @@
 
-  "use strict";
-
   nwsApp.config(function($routeProvider) {
     $routeProvider
       .when("/", {

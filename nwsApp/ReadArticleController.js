@@ -1,6 +1,4 @@
 
-  "use strict";
-
   nwsApp.controller("ReadArticleController", ["$scope", "$http", "$location", "$routeParams", "$route", "$sce", "myServices",
     function ($scope, $http, $location, $routeParams, $route, $sce, myServices) {
 
