@@ -1,6 +1,6 @@
 <?php
 
-  $dsn = "mysql:host=127.0.0.1;dbname=nws_db";
+  $dsn = "mysql:host=localhost;dbname=nws_db";
   $username = "nws_user";
   $password = "password";
   $options = array(

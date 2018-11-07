@@ -41,7 +41,7 @@ CREATE TABLE `videos_t` (
 
 LOCK TABLES `videos_t` WRITE;
 /*!40000 ALTER TABLE `videos_t` DISABLE KEYS */;
-INSERT INTO `videos_t` VALUES (1,'onsite','video/ogg','Natural Gas','Large quantities of natural gas discovered in Deer Park neighborhood!','videos/Natural_Gas_video.ogg'),(2,'youtube','','Pinback: A Request','From the album \'Information Received\'.','https://www.youtube.com/watch?v=MaHrMR7JRS8'),(3,'','','No video','Sorry, there is no video available.','img/no_cat.jpg'),(4,'youtube','','Dave\'s World: He Gooched His Bass Guitar','Dave fixes a bass and enjoys a beer.','https://www.youtube.com/watch?v=EZ10jbzcD18'),(5,'youtube','','You Only Live Once (Cover)','Five dudes, who look remarkably alike, cover The Strokes.','https://www.youtube.com/watch?v=GLf3nrZXZT8');
+INSERT INTO `videos_t` VALUES (1,'onsite','video/ogg','Natural Gas','Large quantities of natural gas discovered in Deer Park neighborhood!','videos/Natural_gas_video.ogg'),(2,'youtube','','Pinback: A Request','From the album \'Information Received\'.','https://www.youtube.com/watch?v=MaHrMR7JRS8'),(3,'','','No video','Sorry, there is no video available.','img/no_cat.jpg'),(4,'youtube','','Dave\'s World: He Gooched His Bass Guitar','Dave fixes a bass and enjoys a beer.','https://www.youtube.com/watch?v=EZ10jbzcD18'),(5,'youtube','','You Only Live Once (Cover)','Five dudes, who look remarkably alike, cover The Strokes.','https://www.youtube.com/watch?v=GLf3nrZXZT8');
 /*!40000 ALTER TABLE `videos_t` ENABLE KEYS */;
 UNLOCK TABLES;
 
